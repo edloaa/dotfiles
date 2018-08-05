@@ -42,6 +42,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - latex & texlive & texmaker & jabref
 - nmap
 - pandoc & pandoc-citeproc
+- taskwarrior & tasksh
 - terminator
 - thunderbird
 - ttf-mscorefonts-installer (Microsoft fonts)
