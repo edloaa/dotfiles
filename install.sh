@@ -17,6 +17,7 @@ then
     ln -srvf bashrc    ~/.bashrc
     ln -srvf vimrc     ~/.vimrc
     ln -srvf nethackrc ~/.nethackrc
+    ln -srvf taskrc    ~/.taskrc
 
     # ==> directories
     vim_dir=~/.vim
