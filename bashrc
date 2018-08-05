@@ -4,10 +4,6 @@
 # /_  _  __/_//_/ / /_/ / / / / //_/ / /_/ / /_/ (__  ) / / /
 #  /_//_/ (_)_/  /_.___/_/_/ /_/_/  /_.___/\__,_/____/_/ /_/
 
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -62,8 +58,34 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# function used in shell prompt to indicate exit code of last command
+exit_code_indicator () {
+    exit_code=$?
+
+    if [ $exit_code -ne "0" ];then
+        # return exit code in RED if !=0
+        echo -e "\e[31m[${exit_code}]\e[0m"
+    else
+        # return exit code in DARK GRAY if 0
+        echo -e "\e[90m[${exit_code}]\e[0m"
+    fi
+}
+
+# function used in shell prompt to indicated open tasks (taskwarrior)
+task_indicator () {
+    number_tasks_due_today=$(task +DUETODAY count)
+
+    if [ $number_tasks_due_today -ne "0" ];then
+        # return number of tasks in friendly BLUE if !=0
+        echo -e "\e[34m(${number_tasks_due_today})\e[0m"
+    else
+        # return number of tasks in friendly DARK GRAY if =0
+        echo -e "\e[90m(${number_tasks_due_today})\e[0m"
+    fi
+}
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] [$?]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] $(exit_code_indicator) $(task_indicator)\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
