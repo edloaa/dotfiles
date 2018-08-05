@@ -1,0 +1,11 @@
+# temporary files
+*.swp
+*~
+
+# vim subdirectories
+vim/.netrwhist
+vim/my_scripts/example_img/
+vim/my_scripts/export/
+vim/plugged/
+vim/spell/*
+
