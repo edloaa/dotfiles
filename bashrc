@@ -152,6 +152,7 @@ fi
 
 # quick access to my folder
 DOTFILES="$HOME/.MyDotfiles/dotfiles/"
+DOTFILES_PRIV="$HOME/.MyDotfiles/dotfiles.priv/"
 PROJECTS="$HOME/projects/"
 
 toilet_clock() {
