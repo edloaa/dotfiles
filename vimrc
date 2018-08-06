@@ -14,6 +14,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'bronson/vim-visual-star-search'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ervandew/supertab'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
@@ -35,7 +36,7 @@ Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 " Shortcut for updating VIM-PLUG and all other plugins
-command! PU PlugUpdate | PlugUpgrade
+command! PU w | source $MYVIMRC | PlugUpdate | PlugUpgrade
 
 " ---------- PLUGIN SETTINGS ----------
 
@@ -79,6 +80,12 @@ nmap <C-Down> ]e
 " bubble multiple lines
 vmap <C-Up>   [egv
 vmap <C-Down> ]egv
+
+" CTRLP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+set wildignore+=*.swp,*.zip
 
 " ---------- BASIC SETTINGS ----------
 
