@@ -15,5 +15,8 @@ search.case.sensitive = no
 include /usr/share/taskwarrior/dark-256.theme
 
 # Urgency coefficients
-urgency.user.tag.leisure.coefficient=0
+urgency.user.project.uni.coefficient     =  3.0
+urgency.user.project.leisure.coefficient = -3.0
+
+# urgency.user.tag.leisure.coefficient    = 0
 
