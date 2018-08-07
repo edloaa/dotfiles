@@ -219,6 +219,14 @@ nnoremap <space> za
 " remove entire word with <C-BS> in insert mode
 inoremap <C-BS> <C-w>
 
+" ---------- ABBREVIATIONS ----------
+" abbreviation
+iabbrev atm at the moment
+iabbrev tmr tomorrow
+
+" autocorrect
+iabbrev teh the
+
 " ---------- SOURCE PRIVATE SETTINGS ----------
 
 " source if file exists

@@ -64,10 +64,12 @@ exit_code_indicator () {
 
     if [ $exit_code -ne "0" ];then
         # return exit code in RED if !=0
-        echo -e "\e[31m[${exit_code}]\e[0m"
+        # echo -e "\e[31m[${exit_code}]\e[0m"
+        echo "[${exit_code}]"
     else
         # return exit code in DARK GRAY if 0
-        echo -e "\e[90m[${exit_code}]\e[0m"
+        # echo -e "\e[90m[${exit_code}]\e[0m"
+        echo "[${exit_code}]"
     fi
 }
 
@@ -77,10 +79,12 @@ task_indicator () {
 
     if [ $number_tasks_due_today -ne "0" ];then
         # return number of tasks in friendly BLUE if !=0
-        echo -e "\e[34m(${number_tasks_due_today})\e[0m"
+        # echo -e "\e[34m(${number_tasks_due_today})\e[0m"
+        echo "(${number_tasks_due_today})"
     else
         # return number of tasks in friendly DARK GRAY if =0
-        echo -e "\e[90m(${number_tasks_due_today})\e[0m"
+        # echo -e "\e[90m(${number_tasks_due_today})\e[0m"
+        echo "(${number_tasks_due_today})"
     fi
 }
 
@@ -206,6 +210,9 @@ alias :q='exit'
 
 # Shortcut for thunar
 alias t='thunar'
+
+# More useful calender
+alias cal='ncal -b -w -A1'
 
 # Source private/sensible settings
 if [[ -f ~/.MyDotfiles/dotfiles.priv/bashrc.priv ]]
