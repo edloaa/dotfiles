@@ -82,10 +82,12 @@ vmap <C-Up>   [egv
 vmap <C-Down> ]egv
 
 " CTRLP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
-set wildignore+=*.swp,*.zip
+let g:ctrlp_map = '<c-p>'     " change mapping to invoke CtrlP in Normal mode
+let g:ctrlp_cmd = 'CtrlP'     " default opening command for above mapping
+let g:ctrlp_by_filename   = 1 " search by filename (as opposed to full path)
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_max_files = 10000 " maximum number of files to scan
+let g:ctrlp_max_depth = 40    " maximum depth of directory tree to recurse into
 
 " ---------- BASIC SETTINGS ----------
 
@@ -131,6 +133,7 @@ set path+=./**            " :find looks for files in all subdirectories
 set foldlevelstart=10     " open most folds by default
 set foldmethod=indent     " fold based on indent level
 set autoread              " automatically read external file changes
+set wildignore+=*.swp,*.zip " patterns to ignore when expanding wildcards
 
 set nostartofline         " keep horizontal cursor position when scrolling
 set nrformats-=octal
