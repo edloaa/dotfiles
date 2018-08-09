@@ -10,12 +10,14 @@
 " VIM-PLUG plugin manager (https://github.com/junegunn/vim-plug)
 call plug#begin('~/.vim/plugged')
 
+" Plugin 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'bronson/vim-visual-star-search'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ervandew/supertab'
+Plug 'lervag/vimtex'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -29,8 +31,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
 
 call plug#end()
@@ -221,6 +222,12 @@ nnoremap <space> za
 
 " remove entire word with <C-BS> in insert mode
 inoremap <C-BS> <C-w>
+
+" copy & paste to clipboard with <C-c> and <C-v>
+vmap     <C-c> "+y
+inoremap <C-v> <C-r>+
+
+inoremap <C-Del> <C-o>daw
 
 " ---------- ABBREVIATIONS ----------
 " abbreviation
