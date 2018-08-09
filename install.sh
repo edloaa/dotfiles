@@ -14,11 +14,11 @@ then
     #  -v : verbose
 
     # ==> files
-    ln -srvf bashrc         ~/.bashrc
-    ln -srvf vimrc          ~/.vimrc
-    ln -srvf nethackrc      ~/.nethackrc
-    ln -srvf taskrc         ~/.taskrc
-    ln -srvf conky/.conkyrc ~/.conkyrc
+    ln -srvf bash/.bashrc        ~/.bashrc
+    ln -srvf vim/.vimrc          ~/.vimrc
+    ln -srvf nethack/.nethackrc  ~/.nethackrc
+    ln -srvf taskwarrior/.taskrc ~/.taskrc
+    ln -srvf conky/.conkyrc      ~/.conkyrc
 
     # ==> directories
     vim_dir=~/.vim
@@ -27,8 +27,8 @@ then
     rm -rf "$vim_dir"
     rm -rf "$terminator_dir"
 
-    ln -srvL vim        "$vim_dir"
-    ln -srvL terminator "$terminator_dir"
+    ln -srvL vim/.vim                       "$vim_dir"
+    ln -srvL terminator/.config/terminator/ "$terminator_dir"
 else
     echo "Abort."
     exit 1

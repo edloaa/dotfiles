@@ -3,9 +3,9 @@
 *~
 
 # vim subdirectories
-vim/.netrwhist
-vim/my_scripts/example_img/
-vim/my_scripts/export/
-vim/plugged/
-vim/spell/*
+vim/.vim/.netrwhist
+vim/.vim/my_scripts/example_img/
+vim/.vim/my_scripts/export/
+vim/.vim/plugged/
+vim/.vim/spell/*
 
