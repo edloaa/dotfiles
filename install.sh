@@ -14,10 +14,11 @@ then
     #  -v : verbose
 
     # ==> files
-    ln -srvf bashrc    ~/.bashrc
-    ln -srvf vimrc     ~/.vimrc
-    ln -srvf nethackrc ~/.nethackrc
-    ln -srvf taskrc    ~/.taskrc
+    ln -srvf bashrc         ~/.bashrc
+    ln -srvf vimrc          ~/.vimrc
+    ln -srvf nethackrc      ~/.nethackrc
+    ln -srvf taskrc         ~/.taskrc
+    ln -srvf conky/.conkyrc ~/.conkyrc
 
     # ==> directories
     vim_dir=~/.vim
