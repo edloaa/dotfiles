@@ -26,3 +26,7 @@ urgency.uda.priority..coefficient  = 1.8
 # List all projects with "task projects", including those completed
 list.all.projects = yes
 
+# Reports
+# "task next": only show a counter for annotations and tags (don't print them)
+report.next.columns=id,start.age,entry.age,depends,priority,project,tags.count,recur,scheduled.countdown,due.relative,until.remaining,description.count,urgency
+
