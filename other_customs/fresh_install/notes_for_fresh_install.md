@@ -26,6 +26,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 
 **ESSENTIALS**
 
+- conky
 - dropbox & "thunar support" (?)
 - enigmail
 - firefox
