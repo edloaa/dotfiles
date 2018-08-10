@@ -128,11 +128,7 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
+# Alias definitions
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -181,38 +177,6 @@ tar_ssh_conf() {
     cd $HOME
     tar -cvzf "ssh-config_$(date "+%F_%H%M").tgz" "./.ssh/"
 }
-
-alias cp='cp -i' # confirm before overwriting something
-alias prgrep='pgrep -fl'
-
-# SSH to Raspberry Pi
-alias sshrp='ssh pi@mango'
-alias sshrp_shutdown='ssh pi@mango "sudo shutdown -h now"'
-
-# System update and apt-clean-up
-alias sysupd='sudo apt-get update && sudo apt-get upgrade'
-alias aptclean='sudo apt-get autoremove && sudo apt-get clean && sudo apt-get autoclean'
-
-# Check internet connections
-alias chincon='sudo netstat -tupan'
-
-# Copy with rsync (useful for large or many files, shows progress)
-alias cpwr='rsync -Pavh --stats "$@"'
-
-# Compute md5sums recursively and save in file
-alias md5sum_recursive='find . -type f -exec md5sum {} > md5sum.txt \;'
-
-# Get today's date in format yyyy-mm-dd
-alias today='date "+%F"'
-
-# Close terminal like Vim
-alias :q='exit'
-
-# Shortcut for thunar
-alias t='thunar'
-
-# More useful calender
-alias cal='ncal -b -w -A1'
 
 # Source private/sensible settings
 if [[ -f ~/.MyDotfiles/dotfiles.priv/bashrc.priv ]]

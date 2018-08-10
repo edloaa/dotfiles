@@ -15,6 +15,7 @@ then
 
     # ==> files
     ln -srvf bash/.bashrc        ~/.bashrc
+    ln -srvf bash/.bash_aliases  ~/.bash_aliases
     ln -srvf vim/.vimrc          ~/.vimrc
     ln -srvf nethack/.nethackrc  ~/.nethackrc
     ln -srvf taskwarrior/.taskrc ~/.taskrc
