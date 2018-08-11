@@ -8,28 +8,18 @@ echo
 
 if [[ "$install" = "y" ]]
 then
-    # CREATE SYMBOLIC LINKS...
-    #  -s : symbolic
-    #  -r : relative
-    #  -v : verbose
+    app_list=( \
+        bash \
+        conky \
+        nethack \
+        taskwarrior \
+        terminator \
+        vim \
+    )
 
-    # ==> files
-    ln -srvf bash/.bashrc        ~/.bashrc
-    ln -srvf bash/.bash_aliases  ~/.bash_aliases
-    ln -srvf vim/.vimrc          ~/.vimrc
-    ln -srvf nethack/.nethackrc  ~/.nethackrc
-    ln -srvf taskwarrior/.taskrc ~/.taskrc
-    ln -srvf conky/.conkyrc      ~/.conkyrc
-
-    # ==> directories
-    vim_dir=~/.vim
-    terminator_dir=~/.config/terminator
-
-    rm -rf "$vim_dir"
-    rm -rf "$terminator_dir"
-
-    ln -srvL vim/.vim                       "$vim_dir"
-    ln -srvL terminator/.config/terminator/ "$terminator_dir"
+    for app in ${app_list[@]}; do
+        stow --verbose --target=$HOME $app
+    done
 else
     echo "Abort."
     exit 1
