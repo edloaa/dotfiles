@@ -8,6 +8,12 @@
 " ---------- PLUGINS ----------
 
 " VIM-PLUG plugin manager (https://github.com/junegunn/vim-plug)
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 
 " Plugin 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -89,6 +95,24 @@ let g:ctrlp_by_filename   = 1 " search by filename (as opposed to full path)
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_max_files = 10000 " maximum number of files to scan
 let g:ctrlp_max_depth = 40    " maximum depth of directory tree to recurse into
+
+" VIMTEX
+" let g:vimtex_fold_enabled
+
+let g:vimtex_compiler_latexmk = {
+    \ 'backend' : 'jobs',
+    \ 'background' : 1,
+    \ 'build_dir' : 'build',
+    \ 'callback' : 1,
+    \ 'continuous' : 1,
+    \ 'executable' : 'latexmk',
+    \ 'options' : [
+    \   '-verbose',
+    \   '-file-line-error',
+    \   '-synctex=1',
+    \   '-interaction=nonstopmode',
+    \ ],
+    \}
 
 " ---------- BASIC SETTINGS ----------
 

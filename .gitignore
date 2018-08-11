@@ -4,6 +4,7 @@
 
 # vim subdirectories
 vim/.vim/.netrwhist
+vim/.vim/autoload/
 vim/.vim/my_scripts/example_img/
 vim/.vim/my_scripts/export/
 vim/.vim/plugged/
