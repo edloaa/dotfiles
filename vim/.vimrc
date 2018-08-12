@@ -242,8 +242,6 @@ map <C-l> <C-w>l
 " space open/closes folds
 nnoremap <space> za
 
-" inoremap kj <esc>
-
 " remove entire word with <C-BS> in insert mode
 inoremap <C-BS> <C-w>
 
@@ -253,15 +251,7 @@ inoremap <C-v> <C-r>+
 
 inoremap <C-Del> <C-o>daw
 
-" ---------- ABBREVIATIONS ----------
-" abbreviation
-iabbrev atm at the moment
-iabbrev tmr tomorrow
-
-" autocorrect
-iabbrev teh the
-
-" ---------- SOURCE PRIVATE SETTINGS ----------
+" ---------- SOURCE ADDITIONAL CONFIG FILES ----------
 
 " source if file exists
 function! SourceIfExists(file)
@@ -270,5 +260,9 @@ function! SourceIfExists(file)
     endif
 endfunction
 
+" private settings
 call SourceIfExists("~/.MyDotfiles/dotfiles.priv/vimrc.priv")
+
+" abbreviations and autocorrect
+call SourceIfExists("~/.MyDotfiles/dotfiles/vim/.vim/my_config/abbreviations.vim")
 
