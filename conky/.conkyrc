@@ -24,21 +24,21 @@ conky.config = {
     -- BASICS
     -- ======
     total_run_times       = 0,
+    update_interval       = 1,
     background            = true,
-    update_interval       =    1,
     double_buffer         = true,
     no_buffers            = true,
     text_buffer_size      = 4096,
     format_human_readable = true,
     short_units           = true,
 
-    own_window       = true,
-    own_window_type  = 'desktop',
-    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window             = true,
+    own_window_type        = 'desktop',
     own_window_transparent = true,
     own_window_argb_visual = true,
     own_window_argb_value  = 0,
     own_window_colour      = '000000',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
 
     draw_shades            = false,
     draw_outline           = false,
@@ -66,6 +66,17 @@ conky.config = {
     -- =======
     cpu_avg_samples    = 4,
     net_avg_samples    = 2,
+
+	-- TEMPLATES
+	-- =========
+	-- template0: progress of today's work (if-statement to prevent div by 0
+	template0 = [[ \
+				COMPLETED=$(task status:completed end.after:today count); \
+	            DUE=$(task +DUETODAY count); \
+				if [ "$DUE" -eq "0" ] && [ "$COMPLETED" -eq "0" ]; then \
+					DUE="1" \
+				fi; \
+				echo "100*$COMPLETED/($COMPLETED+$DUE)" | bc ]],
 };
 
 conky.text = [[
@@ -94,13 +105,15 @@ ${downspeedgraph wlp2s0 25,138 5e7b7b d8deeb -t}   ${goto 140} $alignr ${upspeed
 ${voffset -20}
 TASK MANAGEMENT  ${hr 2}
 ${voffset -10}
-Overdue:   ${goto 100} ${execi 20 task +OVERDUE count}  ${goto 140} Total pending: $alignr ${execi 20 task status:pending count}
-Due today: ${goto 100} ${execi 20 task +DUETODAY count} ${goto 140} Completed:     $alignr ${execi 20 task status:completed end.after:today count}
+Overdue:   ${goto 100} ${execi 60 task +OVERDUE count}  ${goto 140} Total pending: $alignr ${execi 60 task status:pending count}
+Due today: ${goto 100} ${execi 60 task +DUETODAY count} ${goto 140} Completed:     $alignr ${execi 60 task status:completed end.after:today count}
 ${voffset -10}
-Progress:  ${goto 100} ${execi 60 COMPLETED=$(task status:completed end.after:today count); DUE=$(task +DUETODAY count); echo "100*$COMPLETED/($COMPLETED+$DUE)" | bc}% ${goto 140} ${execibar 60 COMPLETED=$(task status:completed end.after:today count); DUE=$(task +DUETODAY count); echo "100*$COMPLETED/($COMPLETED+$DUE)" | bc}
+Progress:  ${goto 100} ${execi 60 ${template0}}% ${goto 140} ${execibar 60 ${template0}}
 
 UPDATES  ${hr 2}
 ${voffset -10}
 ${execi 120 /usr/lib/update-notifier/apt-check --human-readable}
 ]]
+
+-- vim: ts=4 sw=4 noet ai cindent syntax=lua
 
