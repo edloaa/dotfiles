@@ -67,16 +67,16 @@ conky.config = {
     cpu_avg_samples    = 4,
     net_avg_samples    = 2,
 
-	-- TEMPLATES
-	-- =========
-	-- template0: progress of today's work (if-statement to prevent div by 0
-	template0 = [[ \
-				COMPLETED=$(task status:completed end.after:today count); \
-	            DUE=$(task +DUETODAY count); \
-				if [ "$DUE" -eq "0" ] && [ "$COMPLETED" -eq "0" ]; then \
-					DUE="1" \
-				fi; \
-				echo "100*$COMPLETED/($COMPLETED+$DUE)" | bc ]],
+    -- TEMPLATES
+    -- =========
+    -- template0: progress of today's work (if-statement to prevent div by 0
+    template0 = [[ \
+                COMPLETED=$(task status:completed end.after:today count); \
+                DUE_TODAY=$(task +TODAY or +OVERDUE count); \
+                if [ "$DUE_TODAY" -eq "0" ] && [ "$COMPLETED" -eq "0" ]; then \
+                    DUE_TODAY="1" \
+                fi; \
+                echo "100*$COMPLETED/($COMPLETED+$DUE_TODAY)" | bc ]],
 };
 
 conky.text = [[
