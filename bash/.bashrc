@@ -179,8 +179,8 @@ tar_ssh_conf() {
 }
 
 # Source private/sensible settings
-if [[ -f ~/.MyDotfiles/dotfiles.priv/bashrc.priv ]]
+if [[ -f ~/.bashrc_priv ]]
 then
-    source ~/.MyDotfiles/dotfiles.priv/bashrc.priv
+    source ~/.bashrc_priv
 fi
 

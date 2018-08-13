@@ -261,8 +261,8 @@ function! SourceIfExists(file)
 endfunction
 
 " private settings
-call SourceIfExists("~/.MyDotfiles/dotfiles.priv/vimrc.priv")
+call SourceIfExists("~/.vimrc_priv")
 
 " abbreviations and autocorrect
-call SourceIfExists("~/.MyDotfiles/dotfiles/vim/.vim/my_config/abbreviations.vim")
+call SourceIfExists("~/.vim/my_config/abbreviations.vim")
 
