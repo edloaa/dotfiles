@@ -16,18 +16,17 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" Plugin 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'nelstrom/vim-markdown-folding'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'bronson/vim-visual-star-search'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ervandew/supertab'
 Plug 'lervag/vimtex'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'nelstrom/vim-markdown-folding'
 Plug 'scrooloose/nerdtree'
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-commentary'
@@ -39,6 +38,10 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
+
+" snipptes and completion
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'Shougo/deoplete.nvim' | Plug 'roxma/nvim-yarp' | Plug 'roxma/vim-hug-neovim-rpc'
 
 call plug#end()
 
@@ -97,8 +100,6 @@ let g:ctrlp_max_files = 10000 " maximum number of files to scan
 let g:ctrlp_max_depth = 40    " maximum depth of directory tree to recurse into
 
 " VIMTEX
-" let g:vimtex_fold_enabled
-
 let g:vimtex_compiler_latexmk = {
     \ 'backend' : 'jobs',
     \ 'background' : 1,
@@ -113,6 +114,14 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
+
+" ULTISNIPS
+let g:UltiSnipsExpandTrigger="<S-Tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" DEOPLETE
+let g:deoplete#enable_at_startup = 1
 
 " ---------- BASIC SETTINGS ----------
 
@@ -219,6 +228,11 @@ nnoremap 0 g0
 nnoremap g0 0
 nnoremap ^ g^
 nnoremap g^ ^
+
+nnoremap  <Up>   g<Up>
+nnoremap g<Up>    <Up>
+nnoremap  <Down> g<Down>
+nnoremap g<Down>  <Down>
 
 " FOR GERMAN KEYBOARD: Map "ö" to ";" (flip through character search commands)
 nnoremap ö ;
