@@ -17,3 +17,5 @@ $ ./install.sh
 
 - Check `other_customs`
 
+![Wake up](./other_customs/fun_tools/wakeupneo/wakeupneo.gif)
+
