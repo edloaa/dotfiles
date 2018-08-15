@@ -63,28 +63,24 @@ exit_code_indicator () {
     exit_code=$?
 
     if [ $exit_code -ne "0" ];then
-        # return exit code in RED if !=0
-        # echo -e "\e[31m[${exit_code}]\e[0m"
         echo "[${exit_code}]"
     else
-        # return exit code in DARK GRAY if 0
-        # echo -e "\e[90m[${exit_code}]\e[0m"
         echo "[${exit_code}]"
     fi
 }
 
 # function used in shell prompt to indicated open tasks (taskwarrior)
 task_indicator () {
-    number_tasks_due_today=$(task +DUETODAY count)
+    if [[ -e ~/.taskrc ]]; then
+        number_tasks_due_today=$(task +DUETODAY count)
 
-    if [ $number_tasks_due_today -ne "0" ];then
-        # return number of tasks in friendly BLUE if !=0
-        # echo -e "\e[34m(${number_tasks_due_today})\e[0m"
-        echo "(${number_tasks_due_today})"
+        if [ $number_tasks_due_today -ne "0" ];then
+            echo "(${number_tasks_due_today})"
+        else
+            echo "(${number_tasks_due_today})"
+        fi
     else
-        # return number of tasks in friendly DARK GRAY if =0
-        # echo -e "\e[90m(${number_tasks_due_today})\e[0m"
-        echo "(${number_tasks_due_today})"
+        echo "(!)"
     fi
 }
 
