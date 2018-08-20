@@ -71,6 +71,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - nethack
 - seahorse
 - skypeforlinux
+- sl
 - spotify
 - toilet
 - tor browser
@@ -79,8 +80,9 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - wikipedia2text
 - xflr5
 
-** Also check **
+**Also check**
 
+- espeak
 - neovim (& GUI version)
 - ssh
 
