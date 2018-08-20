@@ -14,7 +14,7 @@
 #   - lmodern
 #   - cmbright
 
-export_dir="export"
+export_dir="."
 input_file="$1"
 output_file="$export_dir/${1/.*/.pdf}"
 
