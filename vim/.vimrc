@@ -265,6 +265,14 @@ inoremap <C-v> <C-r>+
 
 inoremap <C-Del> <C-o>daw
 
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR>  {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
 " ---------- SOURCE ADDITIONAL CONFIG FILES ----------
 
 " source if file exists
