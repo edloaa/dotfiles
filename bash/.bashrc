@@ -72,7 +72,7 @@ exit_code_indicator () {
 # function used in shell prompt to indicated open tasks (taskwarrior)
 task_indicator () {
     if [[ -e ~/.taskrc ]]; then
-        number_tasks_due_today=$(task +DUETODAY count)
+        number_tasks_due_today=$(task +TODAY or +OVERDUE count)
 
         if [ $number_tasks_due_today -ne "0" ];then
             echo "(${number_tasks_due_today})"

@@ -33,3 +33,6 @@ alias t='thunar'
 # More useful calender
 alias cal='ncal -b -w -A1'
 
+# Stop the steam locomotive
+alias sl='sl -e'
+
