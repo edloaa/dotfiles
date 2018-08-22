@@ -36,3 +36,21 @@ alias cal='ncal -b -w -A1'
 # Stop the steam locomotive
 alias sl='sl -e'
 
+# Source bashrc
+alias source_bashrc='source ~/.bashrc'
+
+#  PDFs
+pdf_2-1_scale() {
+    pdfjam --nup 2x1 ${1} --landscape --a4paper --scale 1.05 --outfile "${1%.*}_mod_2x1.pdf"
+}
+
+ConvertWeirdFileNameCharacters() {
+    for file_name in "$@"
+    do
+        new_file_name=$(echo "$file_name" | sed -e 's/ /_/g' \
+                                                -e 's/,/_/g' \
+                       )
+        mv -v "$file_name" "$new_file_name"
+    done
+}
+
