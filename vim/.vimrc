@@ -82,6 +82,7 @@ let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list            = 0
 let g:syntastic_check_on_open            = 1
 let g:syntastic_check_on_wq              = 0
+let g:syntastic_python_python_exec = 'python3'
 
 " VIM-UNIMPAIRED
 " bubble single lines
@@ -91,13 +92,13 @@ nmap <C-Down> ]e
 vmap <C-Up>   [egv
 vmap <C-Down> ]egv
 
-" CTRLP
-let g:ctrlp_map = '<c-p>'     " change mapping to invoke CtrlP in Normal mode
-let g:ctrlp_cmd = 'CtrlP'     " default opening command for above mapping
-let g:ctrlp_by_filename   = 1 " search by filename (as opposed to full path)
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_max_files = 10000 " maximum number of files to scan
-let g:ctrlp_max_depth = 40    " maximum depth of directory tree to recurse into
+" " CTRLP
+" let g:ctrlp_map = '<c-p>'     " change mapping to invoke CtrlP in Normal mode
+" let g:ctrlp_cmd = 'CtrlP'     " default opening command for above mapping
+" let g:ctrlp_by_filename   = 1 " search by filename (as opposed to full path)
+" let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+" let g:ctrlp_max_files = 10000 " maximum number of files to scan
+" let g:ctrlp_max_depth = 40    " maximum depth of directory tree to recurse into
 
 " VIMTEX
 let g:vimtex_compiler_latexmk = {
