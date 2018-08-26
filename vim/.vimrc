@@ -131,7 +131,9 @@ set encoding=utf-8        " standard character encoding
 set shell=/bin/bash       " standard shell
 syntax enable 		  " syntax highlighting
 filetype plugin indent on " turns on 'detection', 'plug-in' and 'indent'
-packadd! matchit          " load Vim's matchit plugin
+if ! has("nvim")
+    packadd! matchit          " load Vim's matchit plugin
+endif
 
 set confirm               " dialogue when an operation has to be confirmed
 set visualbell t_vb=      " visual bell instead of beeping

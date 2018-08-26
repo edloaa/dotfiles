@@ -11,6 +11,7 @@ then
     app_list=( \
         bash \
         conky \
+        neovim \
         nethack \
         taskwarrior \
         terminator \
