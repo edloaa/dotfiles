@@ -27,6 +27,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 **ESSENTIALS**
 
 - conky
+- curl
 - dropbox & "thunar support" (?)
 - enigmail
 - firefox
@@ -43,6 +44,9 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - latex & texlive & texmaker & jabref
 - nmap
 - pandoc & pandoc-citeproc
+- pwgen
+- rsync
+- stow
 - taskwarrior & tasksh
 - terminator
 - thunderbird
@@ -85,4 +89,5 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - espeak
 - neovim (& GUI version)
 - ssh
-
+- tmux
+- wget
