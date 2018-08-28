@@ -41,7 +41,14 @@ Plug 'vim-syntastic/syntastic'
 
 " snipptes and completion
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'Shougo/deoplete.nvim' | Plug 'roxma/nvim-yarp' | Plug 'roxma/vim-hug-neovim-rpc'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 call plug#end()
 
@@ -132,7 +139,7 @@ set shell=/bin/bash       " standard shell
 syntax enable 		  " syntax highlighting
 filetype plugin indent on " turns on 'detection', 'plug-in' and 'indent'
 if ! has("nvim")
-    packadd! matchit          " load Vim's matchit plugin
+    packadd! matchit      " load Vim's matchit plugin
 endif
 
 set confirm               " dialogue when an operation has to be confirmed
