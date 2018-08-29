@@ -105,6 +105,8 @@ ${downspeedgraph wlp2s0 25,138 5e7b7b d8deeb -t}   ${goto 140} $alignr ${upspeed
 ${voffset -20}
 TASK MANAGEMENT  ${hr 2}
 ${voffset -10}
+Server:    ${goto 100} ${execi 600 bash ~/.task_server/taskserver_check.sh}
+${voffset -10}
 Overdue:   ${goto 100} ${execi 60 task +OVERDUE count}  ${goto 140} Total pending: $alignr ${execi 60 task status:pending count}
 Due today: ${goto 100} ${execi 60 task +DUETODAY count} ${goto 140} Completed:     $alignr ${execi 60 task status:completed end.after:today count}
 ${voffset -10}
