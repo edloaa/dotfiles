@@ -224,8 +224,8 @@ noremap \ ,
 " exporting files with pandoc
 command! PandocExportMarkdown2Pdf    w | !$HOME/.vim/my_scripts/pandoc_markdown_to_pdf.sh %
 command! PandocExportMarkdown2Beamer w | !$HOME/.vim/my_scripts/pandoc_markdown_to_beamer.sh %
-nmap <C-e><C-p> :PandocExportMarkdown2Pdf <CR>
-nmap <C-e><C-b> :PandocExportMarkdown2Beamer <CR>
+nmap <leader>ep :PandocExportMarkdown2Pdf <CR>
+nmap <leader>eb :PandocExportMarkdown2Beamer <CR>
 
 " turn off search highlight:
 nnoremap <silent> <leader><space> :nohlsearch<CR>
