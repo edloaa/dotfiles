@@ -53,6 +53,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - ttf-mscorefonts-installer (Microsoft fonts)
 - vim & gvim
 - vlc
+- wireshark (& GUI)
 - xclip
 - youtube-dl
 - zulucrypt
