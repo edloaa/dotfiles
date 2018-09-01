@@ -137,7 +137,6 @@ let g:deoplete#enable_at_startup = 1
 
 " ---------- BASIC SETTINGS ----------
 
-set nocompatible          " disable Vi compatibility
 set encoding=utf-8        " standard character encoding
 set shell=/bin/bash       " standard shell
 syntax enable 		  " syntax highlighting
