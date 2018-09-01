@@ -28,6 +28,7 @@ Plug 'lervag/vimtex'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'scrooloose/nerdtree'
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-commentary'
@@ -135,14 +136,26 @@ let g:deoplete#enable_at_startup = 1
 " TABULAR
 " ==> see mapping section
 
+" PYTHON-MODE
+let g:pymode_python = 'python3'
+
 " ---------- BASIC SETTINGS ----------
 
 set encoding=utf-8        " standard character encoding
 set shell=/bin/bash       " standard shell
 syntax enable 		  " syntax highlighting
-filetype plugin indent on " turns on 'detection', 'plug-in' and 'indent'
+
 if ! has("nvim")
-    packadd! matchit      " load Vim's matchit plugin
+    filetype plugin indent on " turns on 'detection', 'plug-in' and 'indent'
+    packadd! matchit          " load Vim's matchit plugin
+    set showcmd               " show command in bottom bar
+    set ruler                 " show line and column number of cursor position
+    set hlsearch              " highlight matches
+    set incsearch             " search results are highlighted while typing
+    set autoindent            " indent from current line when starting a new line
+    set backspace=2           " backspace over autoindent/line break/start of insert
+    set smarttab
+    set autoread              " automatically read external file changes
 endif
 
 set confirm               " dialogue when an operation has to be confirmed
@@ -154,8 +167,6 @@ set shortmess+=I          " do not show Vim standard startup message
 set number relativenumber " show relative line numbers
 set cursorline            " highlight current line
 set laststatus=2          " always display the status line
-set showcmd               " show command in bottom bar
-set ruler                 " show line and column number of cursor position
 set cmdheight=2           " number of screen lines to use for command-line
 set scrolloff=1           " vertical scroll offset
 set sidescrolloff=5       " horizontal scroll offset
@@ -163,14 +174,8 @@ set linebreak             " wrap text at full words
 set showbreak=@           " characters indicating line wrapping
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+,eol:$ " invisibles
 
-set hlsearch              " highlight matches
-set incsearch             " search results are highlighted while typing
 set showmatch             " highlight matching brackets
-
 set shiftwidth=4 softtabstop=4 expandtab " use 4 spaces instead of tabs
-set autoindent            " indent from current line when starting a new line
-set backspace=2           " backspace over autoindent/line break/start of insert
-set smarttab
 set smartindent
 
 set wildmode=longest,list " bash-shell-like autocompletion
@@ -179,7 +184,6 @@ set hidden                " makes it easier to create hidden buffers
 set path+=./**            " :find looks for files in all subdirectories
 set foldlevelstart=10     " open most folds by default
 set foldmethod=indent     " fold based on indent level
-set autoread              " automatically read external file changes
 set wildignore+=*.swp,*.zip " patterns to ignore when expanding wildcards
 
 set nostartofline         " keep horizontal cursor position when scrolling
