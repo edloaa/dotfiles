@@ -22,13 +22,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'bronson/vim-visual-star-search'
+Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'lervag/vimtex'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'scrooloose/nerdtree'
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-commentary'
@@ -136,8 +136,8 @@ let g:deoplete#enable_at_startup = 1
 " TABULAR
 " ==> see mapping section
 
-" PYTHON-MODE
-let g:pymode_python = 'python3'
+" JEDI-VIM
+let g:jedi#use_splits_not_buffers = "right"
 
 " ---------- BASIC SETTINGS ----------
 
