@@ -44,6 +44,10 @@ pdf_2-1_scale() {
     pdfjam --nup 2x1 ${1} --landscape --a4paper --scale 1.05 --outfile "${1%.*}_mod_2x1.pdf"
 }
 
+pdf_2-2_scale() {
+    pdfjam --nup 2x2 ${1} --landscape --a4paper --scale 0.92 --outfile "${1%.*}_mod_2x2.pdf"
+}
+
 ConvertWeirdFileNameCharacters() {
     for file_name in "$@"
     do
