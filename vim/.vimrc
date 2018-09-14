@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
 
 " Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'nelstrom/vim-markdown-folding'
+" Plug 'flazz/vim-colorschemes'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-trailing-whitespace'
@@ -252,6 +253,10 @@ nnoremap  <Up>   g<Up>
 nnoremap g<Up>    <Up>
 nnoremap  <Down> g<Down>
 nnoremap g<Down>  <Down>
+
+" move by VISUAL line, wrapped lines treated as two lines in INSERT MODE too
+inoremap <Up>   <C-o>g<Up>
+inoremap <Down> <C-o>g<Down>
 
 " FOR GERMAN KEYBOARD: Map "ö" to ";" (flip through character search commands)
 nnoremap ö ;
