@@ -39,6 +39,9 @@ alias sl='sl -e'
 # Source bashrc
 alias source_bashrc='source ~/.bashrc'
 
+# Catch common mistakes
+alias cd..='cd ..'
+
 #  PDFs
 pdf_2-1_scale() {
     pdfjam --nup 2x1 ${1} --landscape --a4paper --scale 1.05 --outfile "${1%.*}_mod_2x1.pdf"
