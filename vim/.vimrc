@@ -231,6 +231,9 @@ nmap <leader>b :e $HOME/.bashrc<CR>
 " map <leader>v in command-line mode to replace the commandline with the Ex command-line beneath the cursor in the buffer
 cnoremap <leader>v <C-\>esubstitute(getline('.'), '^\s*\(' . escape(substitute(&commentstring, '%s.*$', '', ''), '*') . '\)*\s*:*' , '', '')<CR>
 
+" ROT13 the entire file
+nmap <leader>c ggg?G
+
 " source vimrc
 nnoremap <F2> :source $MYVIMRC<CR>
 
