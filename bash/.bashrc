@@ -151,6 +151,9 @@ DOTFILES="$HOME/.MyDotfiles/dotfiles/"
 DOTFILES_PRIV="$HOME/.MyDotfiles/dotfiles.priv/"
 PROJECTS="$HOME/projects/"
 
+# Preferred Vim version
+VIM="nvim-qt"
+
 toilet_clock() {
     while true
     do

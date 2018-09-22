@@ -42,6 +42,9 @@ alias source_bashrc='source ~/.bashrc'
 # Catch common mistakes
 alias cd..='cd ..'
 
+# Create new files from templates
+alias templ_py='cp -vi ~/.templates/Python.py . && eval "$VIM ./Python.py"'
+
 #  PDFs
 pdf_2-1_scale() {
     pdfjam --nup 2x1 ${1} --landscape --a4paper --scale 1.05 --outfile "${1%.*}_mod_2x1.pdf"

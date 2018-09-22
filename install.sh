@@ -14,6 +14,7 @@ then
         neovim \
         nethack \
         taskwarrior \
+        templates \
         terminator \
         vim \
     )
