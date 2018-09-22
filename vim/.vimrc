@@ -101,6 +101,9 @@ nmap <C-Down> ]e
 " bubble multiple lines
 vmap <C-Up>   [egv
 vmap <C-Down> ]egv
+" move through buffer list
+nmap <C-Right> ]b
+nmap <C-Left> [b
 
 " " CTRLP
 " let g:ctrlp_map = '<c-p>'     " change mapping to invoke CtrlP in Normal mode
