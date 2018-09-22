@@ -213,6 +213,9 @@ command! PandocExportMarkdown2Beamer w | !$HOME/.vim/my_scripts/pandoc_markdown_
 nmap <leader>ep :PandocExportMarkdown2Pdf <CR>
 nmap <leader>eb :PandocExportMarkdown2Beamer <CR>
 
+" 'git status' (VIM-FUGITIVE)
+nmap <silent> <leader>gs :Gstatus <CR>
+
 command! GitReviewAndPush !terminator -e "$HOME/.vim/my_scripts/git_review_and_push.sh"
 nmap <silent> <leader>gp :GitReviewAndPush <CR>
 
