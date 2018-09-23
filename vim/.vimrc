@@ -101,9 +101,6 @@ nmap <C-Down> ]e
 " bubble multiple lines
 vmap <C-Up>   [egv
 vmap <C-Down> ]egv
-" move through buffer list
-nmap <C-Right> ]b
-nmap <C-Left> [b
 
 " " CTRLP
 " let g:ctrlp_map = '<c-p>'     " change mapping to invoke CtrlP in Normal mode
@@ -237,6 +234,9 @@ nmap <leader>v :e $MYVIMRC<CR>
 " shortcut to edit vimrc
 nmap <leader>b :e $HOME/.bashrc<CR>
 
+" open external terminal
+nmap <leader>t :!terminator --working-directory=%%<CR>
+
 " map <leader>v in command-line mode to replace the commandline with the Ex command-line beneath the cursor in the buffer
 cnoremap <leader>v <C-\>esubstitute(getline('.'), '^\s*\(' . escape(substitute(&commentstring, '%s.*$', '', ''), '*') . '\)*\s*:*' , '', '')<CR>
 
@@ -248,6 +248,11 @@ nnoremap <F2> :source $MYVIMRC<CR>
 
 " toggle paste-option
 set pastetoggle=<F11>
+
+" move through buffer list
+nmap <silent> <C-Right> :bprevious<CR>
+nmap <silent> <C-Left>  :bnext<CR>
+nmap <silent> <C-Del>   :bdelete<CR>
 
 " move by VISUAL line, wrapped lines treated as two lines
 nnoremap j gj
