@@ -43,7 +43,11 @@ alias source_bashrc='source ~/.bashrc'
 alias cd..='cd ..'
 
 # Create new files from templates
-alias templ_py='cp -vi ~/.templates/Python.py . && eval "$VIM ./Python.py"'
+TEMPLATE_DIR="$HOME/.templates"
+TEMPLATE_PYTHON="Python.py"
+TEMPLATE_BASH="Bash.sh"
+alias templ_py='cp -vi ${TEMPLATE_DIR}/${TEMPLATE_PYTHON} . && eval "$VIM ./${TEMPLATE_PYTHON}"'
+alias templ_sh='cp -vi ${TEMPLATE_DIR}/${TEMPLATE_BASH}   . && eval "$VIM ./${TEMPLATE_BASH}"'
 
 #  PDFs
 pdf_2-1_scale() {
