@@ -337,6 +337,22 @@ function! s:align()
 endfunction
 " END: TABULAR
 
+" Compress whitespace in a visual selection
+"   --> Replace two or more '{2,}' whitespaces '\s' with a single space
+"       character, but only if preceded '\@<=' by one or more non-whitespace
+"       characters '\S'
+"   --> For instance useful to convert THIS:
+"
+"        foo   =      1729
+"        bar  =   42
+"
+"       ... TO THIS:
+"
+"        foo = 1729
+"        bar = 42
+"
+vmap <F5> :s/\(\S\+\)\@<=\s\{2,\}/ /g<CR>
+
 " ---------- SOURCE ADDITIONAL CONFIG FILES ----------
 
 " source if file exists
