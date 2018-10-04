@@ -20,3 +20,6 @@ set inccommand=split
 tnoremap <Esc> <C-\><C-n>
 tnoremap <C-v><Esc> <Esc>
 
+highlight! link TermCursor Cursor
+highlight! TermCursorNC guibg=green guifg=white ctermbg=10 ctermfg=15
+
