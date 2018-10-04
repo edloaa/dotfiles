@@ -229,8 +229,8 @@ nmap <leader>v :e $MYVIMRC<CR>
 " shortcut to edit vimrc
 nmap <leader>b :e $HOME/.bashrc<CR>
 
-" open external terminal
-nmap <leader>t :!terminator --working-directory=%%<CR>
+" open terminal buffer
+nmap <leader>t :terminal<CR>i
 
 " map <leader>v in command-line mode to replace the commandline with the Ex command-line beneath the cursor in the buffer
 cnoremap <leader>v <C-\>esubstitute(getline('.'), '^\s*\(' . escape(substitute(&commentstring, '%s.*$', '', ''), '*') . '\)*\s*:*' , '', '')<CR>
