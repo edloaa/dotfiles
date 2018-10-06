@@ -183,3 +183,6 @@ then
     source ~/.bashrc_priv
 fi
 
+# FZF fuzzy finder
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
