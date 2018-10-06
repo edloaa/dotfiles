@@ -197,6 +197,8 @@ set textwidth=0
 set colorcolumn=80
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
+set splitright " vsplit to the right side
+
 " ---------- GENERAL KEY REMAPPING ----------
 
 let mapleader = ","
@@ -230,7 +232,7 @@ nmap <leader>v :e $MYVIMRC<CR>
 nmap <leader>b :e $HOME/.bashrc<CR>
 
 " open terminal buffer
-nmap <leader>t :terminal<CR>i
+nmap <leader>t :vsplit <Bar> terminal<CR>
 
 " map <leader>v in command-line mode to replace the commandline with the Ex command-line beneath the cursor in the buffer
 cnoremap <leader>v <C-\>esubstitute(getline('.'), '^\s*\(' . escape(substitute(&commentstring, '%s.*$', '', ''), '*') . '\)*\s*:*' , '', '')<CR>
@@ -245,8 +247,8 @@ nnoremap <F2> :source $MYVIMRC<CR>
 set pastetoggle=<F11>
 
 " move through buffer list
-nmap <silent> <C-Right> :bprevious<CR>
-nmap <silent> <C-Left>  :bnext<CR>
+nmap <silent> <C-Right> :bnext<CR>
+nmap <silent> <C-Left>  :bprevious<CR>
 nmap <silent> <C-Del>   :bdelete<CR>
 
 " move by VISUAL line, wrapped lines treated as two lines
