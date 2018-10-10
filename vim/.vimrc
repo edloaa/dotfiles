@@ -143,7 +143,7 @@ syntax enable 		  " syntax highlighting
 
 if ! has("nvim")
     filetype plugin indent on " turns on 'detection', 'plug-in' and 'indent'
-    packadd! matchit          " load Vim's matchit plugin
+    " packadd! matchit          " load Vim's matchit plugin
     set showcmd               " show command in bottom bar
     set ruler                 " show line and column number of cursor position
     set hlsearch              " highlight matches
@@ -181,6 +181,7 @@ set path+=./**            " :find looks for files in all subdirectories
 set foldlevelstart=10     " open most folds by default
 set foldmethod=indent     " fold based on indent level
 set wildignore+=*.swp,*.zip " patterns to ignore when expanding wildcards
+set complete+=kspell      " autocomplete with dictionary words when spell check is on
 
 set nostartofline         " keep horizontal cursor position when scrolling
 set nrformats-=octal
@@ -197,7 +198,10 @@ set textwidth=0
 set colorcolumn=80
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
-set splitright " vsplit to the right side
+set splitright   " vsplit to the right side
+set autowrite    " automatically :write before running commands
+set nojoinspaces " use one space, not two, after punctuation.
+set diffopt+=vertical " always use vertical diffs
 
 " ---------- GENERAL KEY REMAPPING ----------
 
