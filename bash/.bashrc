@@ -91,7 +91,7 @@ else
 fi
 unset color_prompt force_color_prompt
 
-export PS2='... '
+PS2='... '
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -155,6 +155,7 @@ PROJECTS="$HOME/projects/"
 
 # Preferred Vim version
 VIM="nvim-qt"
+VIM_TERM="nvim"
 
 toilet_clock() {
     while true
@@ -187,4 +188,9 @@ fi
 
 # FZF fuzzy finder
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Customisations for neovim terminal
+if [[ -n "$NVIM_LISTEN_ADDRESS" ]]; then
+    alias nvim='cowsay "Running nvim inside nvim makes life hard -- Shakespeare"'
+fi
 
