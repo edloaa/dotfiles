@@ -1,7 +1,7 @@
 /*
-Name: name
-Date: date
-Author: author
+File: filename
+Author: name
+Email: name@email.com
 Description: description
 */
 

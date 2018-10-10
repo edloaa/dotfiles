@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Name: name
-# Date: date
-# Author: author
+# File: filename
+# Author: name
+# Email: name@email.com
 # Description: description
 
 date=$(date +"%F")
