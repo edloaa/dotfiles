@@ -44,9 +44,9 @@ alias cd..='cd ..'
 
 # Create new files from templates
 TEMPLATE_DIR="$HOME/.templates"
-TEMPLATE_PYTHON="Python.py"
-TEMPLATE_BASH="Bash.sh"
-TEMPLATE_C="C.c"
+TEMPLATE_PYTHON="python.py"
+TEMPLATE_BASH="bash.sh"
+TEMPLATE_C="c.c"
 alias templ_py='cp -vi ${TEMPLATE_DIR}/${TEMPLATE_PYTHON} . && eval "$VIM ./${TEMPLATE_PYTHON}"'
 alias templ_sh='cp -vi ${TEMPLATE_DIR}/${TEMPLATE_BASH}   . && eval "$VIM ./${TEMPLATE_BASH}"'
 alias templ_c='cp -vi  ${TEMPLATE_DIR}/${TEMPLATE_C}      . && eval "$VIM ./${TEMPLATE_C}"'
