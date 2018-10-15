@@ -16,6 +16,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'bronson/vim-visual-star-search'
 Plug 'davidhalter/jedi-vim'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -110,4 +111,8 @@ let g:deoplete#enable_at_startup = 1
 
 " JEDI-VIM
 let g:jedi#use_splits_not_buffers = "right"
+
+" EDITORCONFIG-VIM
+let g:EditorConfig_exclude_patterns   = ['fugitive://.*', 'scp://.*']
+let g:EditorConfig_max_line_indicator = "fill"
 

@@ -11,6 +11,7 @@ then
     app_list=( \
         bash \
         conky \
+        editorconfig \
         fzf \
         neovim \
         nethack \

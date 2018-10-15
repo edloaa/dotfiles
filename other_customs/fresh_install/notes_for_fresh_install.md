@@ -29,6 +29,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - conky
 - curl
 - dropbox & "thunar support" (?)
+- editorconfig
 - enigmail
 - firefox
 - gimp
