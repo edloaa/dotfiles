@@ -66,3 +66,17 @@ set textwidth=0
 set colorcolumn=80
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
+" Make undo persist between sessions
+set undofile
+set undodir=~/.cache/vim/undo
+
+if !isdirectory(&undodir)
+    call mkdir(&undodir, 'p')
+endif
+
+" Don't save undo history for specific files (security)
+augroup vimrc
+    autocmd!
+    autocmd BufWritePre /tmp/* setlocal noundofile
+augroup END
+
