@@ -1,10 +1,10 @@
 " ---------- ABBREVIATIONS ----------
 
-" abbreviations
+" Abbreviations
 iabbrev atm at the moment
 iabbrev tmr tomorrow
 
-" autocorrect
+" Autocorrect
 iabbrev adress address
 iabbrev Adress Address
 iabbrev jsut just
