@@ -16,7 +16,6 @@ root = true
 charset = utf-8
 end_of_line = lf
 insert_final_newline = true
-max_line_length = 80
 
 # --- Python ---
 [*.py]
@@ -27,4 +26,8 @@ trim_trailing_whitespace = true
 # --- Makefile ---
 [Makefile]
 indent_style = tab
+
+# --- Emails ---
+[*.{mail,email}]
+max_line_length = 80
 
