@@ -102,6 +102,9 @@ nnoremap <F2> :source $MYVIMRC<CR>
 " (Plugin) VIM-OBSESSION
 nnoremap <F3> :Obsession<CR>
 
+" Source 'Session.vim' (continue session)
+nnoremap <F4> :source Session.vim<CR>
+
 " (Plugin) STRIP-TRAILING-WHITESPACE
 nnoremap <F5> :FixWhitespace<CR>
 
@@ -134,9 +137,7 @@ nmap <leader>a: :Tabularize /:\zs<CR>
 vmap <leader>a: :Tabularize /:\zs<CR>
 nmap <leader>a# :Tabularize /#<CR>
 vmap <leader>a# :Tabularize /#<CR>
-
-" Shortcut to edit vimrc
-nmap <leader>b :e $HOME/.bashrc<CR>
+cnoremap <leader>a Tabularize /
 
 " ROT13 the entire file
 nmap <leader>c ggg?G
@@ -146,6 +147,14 @@ command! PandocExportMarkdown2Pdf    w | !$HOME/.vim/my_scripts/pandoc_markdown_
 command! PandocExportMarkdown2Beamer w | !$HOME/.vim/my_scripts/pandoc_markdown_to_beamer.sh %
 nmap <leader>ep :PandocExportMarkdown2Pdf <CR>
 nmap <leader>eb :PandocExportMarkdown2Beamer <CR>
+
+" Shortcut to edit...
+" - bashrc
+" - hosts
+" - vimrc
+nmap <leader>fb :e $HOME/.bashrc<CR>
+nmap <leader>fh :e /etc/hosts<CR>
+nmap <leader>fv :e $MYVIMRC<CR>
 
 " --- Git mappings ---
 " (Plugin) VIM-FUGITIVE: 'git diff' and 'git status'
@@ -166,9 +175,6 @@ nmap <leader>t :vsplit <Bar> terminal<CR>
 
 " Read templates
 cnoremap <leader>t -1 read ~/.templates/
-
-" Shortcut to edit vimrc
-nmap <leader>v :e $MYVIMRC<CR>
 
 " Map <leader>v in command-line mode to replace the commandline with the Ex command-line beneath the cursor in the buffer
 cnoremap <leader>v <C-\>esubstitute(getline('.'), '^\s*\(' . escape(substitute(&commentstring, '%s.*$', '', ''), '*') . '\)*\s*:*' , '', '')<CR>
