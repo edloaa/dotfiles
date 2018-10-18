@@ -82,3 +82,11 @@ augroup no_undo_files
                 \ setlocal noundofile
 augroup END
 
+if has("nvim")
+    set inccommand=split
+
+    " Terminal cursor color
+    highlight! link TermCursor Cursor
+    highlight! TermCursorNC guibg=green guifg=white ctermbg=10 ctermfg=15
+endif
+

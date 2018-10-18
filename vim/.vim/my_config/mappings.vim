@@ -92,6 +92,14 @@ inoremap { {}<left>
 inoremap {<CR>  {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
+if has("nvim")
+    " Terminal mode
+    " <Esc> to exit terminal mode
+    " <C-v><Esc> (mnemonic: verbatim escape) to send escape key to shell
+    tnoremap <Esc> <C-\><C-n>
+    tnoremap <C-v><Esc> <Esc>
+endif
+
 " -------------------------------------------
 " ---------- FUNCTION KEY MAPPINGS ----------
 " -------------------------------------------
