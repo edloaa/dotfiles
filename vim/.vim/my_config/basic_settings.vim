@@ -58,6 +58,7 @@ set spelllang=en_gb  " Standard language for spell checking
 set splitright        " Vsplit to the right side
 set nojoinspaces      " Use one space, not two, after punctuation.
 set diffopt+=vertical " Always use vertical diffs
+set updatetime=100
 
 set background=dark " Always use dark mode
 colorscheme gruvbox " Standard colorscheme

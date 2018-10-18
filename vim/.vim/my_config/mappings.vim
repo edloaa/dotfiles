@@ -163,6 +163,13 @@ nmap <silent> <leader>gs :Gstatus <CR>
 " Review and push a repository
 command! GitReviewAndPush !terminator -e "$HOME/.vim/my_scripts/git_review_and_push.sh"
 nmap <silent> <leader>gp :GitReviewAndPush <CR>
+" (Plugin) VIM-GITGUTTER: Highlighting and hunks
+nmap <silent> <leader>gt :GitGutterLineHighlightsToggle <CR>
+nmap <leader>ghn <Plug>GitGutterNextHunk
+nmap <leader>ghN <Plug>GitGutterPrevHunk
+nmap <leader>ghs <Plug>GitGutterStageHunk
+nmap <leader>ghu <Plug>GitGutterUndoHunk
+nmap <leader>ghv <Plug>GitGutterPreviewHunk
 
 " Toggle for showing invisibles (tabs, carriage returns, ...)
 nnoremap <silent> <leader>l :set list!<CR>
