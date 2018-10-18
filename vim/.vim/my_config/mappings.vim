@@ -123,6 +123,9 @@ nnoremap <F5> :FixWhitespace<CR>
 "        bar = 42
 vmap <F5> :s/\(\S\+\)\@<=\s\{2,\}/ /g<CR>
 
+" Vertical split
+nmap <F9> :vsplit<CR>
+
 " Toggle paste-option
 set pastetoggle=<F11>
 

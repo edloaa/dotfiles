@@ -76,8 +76,9 @@ if !isdirectory(&undodir)
 endif
 
 " Don't save undo history for specific files (security)
-augroup vimrc
+augroup no_undo_files
     autocmd!
-    autocmd BufWritePre /tmp/* setlocal noundofile
+    autocmd BufWritePre /tmp/*,/etc/hosts
+                \ setlocal noundofile
 augroup END
 

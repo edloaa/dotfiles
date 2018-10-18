@@ -60,7 +60,7 @@ let NERDTreeShowHidden = 1
 
 " VIM-INDENT-GUIDES
 let g:indent_guides_enable_on_vim_startup = 0
-let g:indent_guides_start_level   	  = 1
+let g:indent_guides_start_level           = 1
 let g:indent_guides_guide_size            = 1
 
 " GRUVBOX
@@ -114,5 +114,5 @@ let g:jedi#use_splits_not_buffers = "right"
 
 " EDITORCONFIG-VIM
 let g:EditorConfig_exclude_patterns   = ['fugitive://.*', 'scp://.*']
-let g:EditorConfig_max_line_indicator = "fill"
+let g:EditorConfig_max_line_indicator = "line"
 
