@@ -17,6 +17,7 @@ noremap \ ,
 nmap <silent> <C-Right> :bnext<CR>
 nmap <silent> <C-Left>  :bprevious<CR>
 nmap <silent> <C-Del>   :bdelete<CR>
+nmap <silent> <C-S-Del> :bdelete!<CR>
 
 " Navigating between split windows
 map <C-h> <C-w>h
@@ -131,8 +132,9 @@ nnoremap <F5> :FixWhitespace<CR>
 "        bar = 42
 vmap <F5> :s/\(\S\+\)\@<=\s\{2,\}/ /g<CR>
 
-" Vertical split
+" Window splits
 nmap <F9> :vsplit<CR>
+nmap <F10> :split<CR>
 
 " Toggle paste-option
 set pastetoggle=<F11>
@@ -185,11 +187,15 @@ nmap <leader>ghv <Plug>GitGutterPreviewHunk
 " Toggle for showing invisibles (tabs, carriage returns, ...)
 nnoremap <silent> <leader>l :set list!<CR>
 
+" Open new buffer
+map <silent> <leader>n :enew<CR>
+
 " Toggle spell checking on and off
 nmap <silent> <leader>s :set spell!<CR>
 
 " Open terminal buffer
-nmap <leader>t :vsplit <Bar> terminal<CR>
+" nmap <leader>t :vsplit <Bar> terminal<CR>
+nmap <leader>t :terminal<CR>
 
 " Read templates
 cnoremap <leader>t -1 read ~/.templates/
