@@ -10,7 +10,7 @@
 --   * apt-check (to check for updates)
 
 -- DEVICES SPECIFIC FOR THIS CONFIG:
---   * wlp2s0 : inet interface
+--   * eno2 : inet interface
 
 conky.config = {
     -- ALIGNMENT AND SIZE
@@ -97,10 +97,10 @@ ${voffset -5}
 NETWORK  ${hr 2}
 ${voffset -10}
 SSID         $alignr $wireless_essid
-Lokal IP     $alignr ${addrs wlp2s0}
-External IP  $alignr ${curl ipinfo.io/ip 10}
-Down ${downspeed wlp2s0}/s  [${totaldown wlp2s0}] ${goto 150} Up ${upspeed wlp2s0}/s  [${totalup wlp2s0}]
-${downspeedgraph wlp2s0 25,138 5e7b7b d8deeb -t}   ${goto 140} $alignr ${upspeedgraph wlp2s0 25,138 99c8e8 618094 -t}
+Lokal IP     $alignr ${addrs eno2}
+External IP  $alignr ${execi 600 curl ipinfo.io/ip}
+Down ${downspeed eno2}/s  [${totaldown eno2}] ${goto 150} Up ${upspeed eno2}/s  [${totalup eno2}]
+${downspeedgraph eno2 25,138 5e7b7b d8deeb -t}   ${goto 140} $alignr ${upspeedgraph eno2 25,138 99c8e8 618094 -t}
 
 ${voffset -20}
 TASK MANAGEMENT  ${hr 2}
