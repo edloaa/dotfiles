@@ -116,3 +116,7 @@ let g:jedi#use_splits_not_buffers = "right"
 let g:EditorConfig_exclude_patterns   = ['fugitive://.*', 'scp://.*']
 let g:EditorConfig_max_line_indicator = "line"
 
+" VIM-COMMENTARY
+" Matlab comments
+autocmd FileType matlab setlocal commentstring=%\ %s
+
