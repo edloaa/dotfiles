@@ -42,6 +42,9 @@ alias source_bashrc='source ~/.bashrc'
 # Catch common mistakes
 alias cd..='cd ..'
 
+# Use python3 as standard interpreter
+alias python='python3'
+
 # Create new files from templates
 TEMPLATE_DIR="$HOME/.templates"
 TEMPLATE_PYTHON="python.py"
