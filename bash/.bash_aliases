@@ -66,6 +66,24 @@ pdf_2-2_scale() {
     pdfjam --nup 2x2 ${1} --landscape --a4paper --scale 0.92 --outfile "${1%.*}_mod_2x2.pdf"
 }
 
+# Convert scanned documents (as jpg-files) to a single A4 pdf-file
+pdf_jpg-convert() {
+    source_dir="orig"
+    dest_dir="proc"
+
+    [[ -z "$1" ]] && threshold_value=80 || threshold_value=$1
+    mkdir -p ${dest_dir}
+
+    for file in ${source_dir}/*; do
+        convert -threshold ${threshold_value}% \
+            ${file} \
+            ${dest_dir}/$(basename ${file/.jpg/_proc.jpg})
+    done
+
+    convert "${dest_dir}/*" -resize 2481x3507 -units PixelsPerInch \
+            -density 300x300 output.pdf
+}
+
 ConvertWeirdFileNameCharacters() {
     for file_name in "$@"
     do
