@@ -40,6 +40,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - gsmartcontrol
 - htop
 - inkscape
+- kdeconnect
 - keepassxc
 - ktouch
 - latex & texlive & texmaker & jabref
@@ -75,6 +76,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - matlab
 - meld
 - nethack
+- octave
 - seahorse
 - skypeforlinux
 - sl
