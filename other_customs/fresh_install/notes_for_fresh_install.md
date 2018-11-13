@@ -47,6 +47,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - nmap
 - pandoc & pandoc-citeproc
 - pwgen
+- pycharm
 - rsync
 - stow
 - taskwarrior & tasksh
