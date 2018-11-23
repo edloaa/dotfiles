@@ -85,6 +85,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - toilet
 - tor browser
 - translate-shell (`trans`, Command-line translator using Google Translate)
+- tree
 - virtual-box
 - wikipedia2text
 - xflr5
