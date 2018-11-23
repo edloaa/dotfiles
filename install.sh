@@ -18,6 +18,7 @@ then
         taskwarrior \
         templates \
         terminator \
+        tmux \
         vim \
     )
 
