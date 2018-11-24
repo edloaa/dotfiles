@@ -48,6 +48,9 @@ alias python='python3'
 # cd to root of git repository
 alias git-root='cd $(git rev-parse --show-toplevel)'
 
+# Define what happens when calling vim
+alias vim='$VIM_TERM'
+
 # Create new files from templates
 TEMPLATE_DIR="$HOME/.templates"
 TEMPLATE_PYTHON="python.py"
