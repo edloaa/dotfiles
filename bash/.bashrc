@@ -194,3 +194,6 @@ if [[ -n "$NVIM_LISTEN_ADDRESS" ]]; then
     alias nvim='cowsay "Running nvim inside nvim makes life hard -- Shakespeare"'
 fi
 
+# Always run tmux
+[[ -z "$TMUX" ]] && tmux
+
