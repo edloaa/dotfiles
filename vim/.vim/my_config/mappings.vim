@@ -164,9 +164,11 @@ nmap <leader>eb :PandocExportMarkdown2Beamer <CR>
 " Shortcut to edit...
 " - bashrc
 " - hosts
+" - tmux.conf
 " - vimrc
 nmap <leader>fb :e $HOME/.bashrc<CR>
 nmap <leader>fh :e /etc/hosts<CR>
+nmap <leader>ft :e ~/.tmux.conf<CR>
 nmap <leader>fv :e $MYVIMRC<CR>
 
 " --- Git mappings ---
