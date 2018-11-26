@@ -51,6 +51,9 @@ alias git-root='cd $(git rev-parse --show-toplevel)'
 # Define what happens when calling vim
 alias vim='$VIM_TERM'
 
+# Custom tmux sessions
+alias tmux-split='~/.tmux/tmux-split.sh'
+
 # Create new files from templates
 TEMPLATE_DIR="$HOME/.templates"
 TEMPLATE_PYTHON="python.py"
