@@ -45,6 +45,9 @@ alias cd..='cd ..'
 # Use python3 as standard interpreter
 alias python='python3'
 
+# Git
+alias g='git'
+
 # cd to root of git repository
 alias git-root='cd $(git rev-parse --show-toplevel)'
 
