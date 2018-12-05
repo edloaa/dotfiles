@@ -6,8 +6,10 @@
 " COMMAND MODE
 " TERMINAL MODE
 
-let mapleader = ","
-noremap \ ,
+" let mapleader = ","
+" noremap \ ,
+let mapleader = " "
+noremap \ " "
 
 " --------------------------------------
 " ---------- GENERAL MAPPINGS ----------
@@ -82,7 +84,7 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 noremap Q !!$SHELL<CR>
 
 " Space open/closes folds
-nnoremap <space> za
+" nnoremap <space> za
 
 " Create pairing brackets in insert mode
 inoremap " ""<left>
