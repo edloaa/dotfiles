@@ -54,6 +54,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - terminator
 - thunderbird
 - ttf-mscorefonts-installer (Microsoft fonts)
+- urlview
 - vim & gvim
 - vlc
 - wireshark (& GUI)
