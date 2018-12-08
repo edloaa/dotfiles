@@ -48,7 +48,9 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - pandoc & pandoc-citeproc
 - pwgen
 - pycharm
+- ranger
 - rsync
+- speedpad
 - stow
 - taskwarrior & tasksh
 - terminator
@@ -98,3 +100,4 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - ssh
 - tmux
 - wget
+
