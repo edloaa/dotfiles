@@ -27,6 +27,10 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Swap meaning marker jumps
+nnoremap ' `
+nnoremap ` '
+
 " Remove entire words in insert mode (backwards and forward)
 inoremap <C-BS> <C-w>
 inoremap <C-Del> <C-o>daw
