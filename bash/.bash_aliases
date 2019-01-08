@@ -48,6 +48,9 @@ alias python='python3'
 # Git
 alias g='git'
 
+# Ranger
+alias r='ranger'
+
 # cd to root of git repository
 alias git-root='cd $(git rev-parse --show-toplevel)'
 
