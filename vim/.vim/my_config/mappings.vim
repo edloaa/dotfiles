@@ -201,6 +201,14 @@ map <silent> <leader>n :enew<CR>
 " Toggle spell checking on and off
 nmap <silent> <leader>s :set spell!<CR>
 
+" Change language for spell checking
+" Se : English
+" Sg : German
+" Ss : Swedish
+nmap <silent> <leader>Se :set spelllang=en_gb<CR>
+nmap <silent> <leader>Sg :set spelllang=de_20<CR>
+nmap <silent> <leader>Ss :set spelllang=sv<CR>
+
 " Open terminal buffer
 " nmap <leader>t :vsplit <Bar> terminal<CR>
 nmap <leader>t :terminal<CR>
