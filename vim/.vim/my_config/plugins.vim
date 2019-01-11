@@ -13,13 +13,14 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" Plug 'nelstrom/vim-markdown-folding'
 " Plug 'flazz/vim-colorschemes'
+" Plug 'nelstrom/vim-markdown-folding'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'bronson/vim-visual-star-search'
 Plug 'davidhalter/jedi-vim'
+Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
