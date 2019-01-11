@@ -220,7 +220,7 @@ cnoremap <leader>t -1 read ~/.templates/
 cnoremap <leader>v <C-\>esubstitute(getline('.'), '^\s*\(' . escape(substitute(&commentstring, '%s.*$', '', ''), '*') . '\)*\s*:*' , '', '')<CR>
 
 " Turn off search highlight
-nnoremap <silent> <leader><space> :nohlsearch<CR>
+nnoremap <silent> <leader>h :nohlsearch<CR>
 
 " --------------------------------------
 " ---------- SPECIAL MAPPINGS ----------
