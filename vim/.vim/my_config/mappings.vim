@@ -138,6 +138,9 @@ nnoremap <F5> :FixWhitespace<CR>
 "        bar = 42
 vmap <F5> :s/\(\S\+\)\@<=\s\{2,\}/ /g<CR>
 
+" Add spaces to "="
+vmap <F6> :s/\(\S\+\)\@<==/ = /g<CR>
+
 " Window splits
 nmap <F9> :vsplit<CR>
 nmap <F10> :split<CR>
