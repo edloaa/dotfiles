@@ -52,7 +52,8 @@ alias g='git'
 alias r='ranger'
 
 # cd to root of git repository
-alias git-root='cd $(git rev-parse --show-toplevel)'
+alias git-root='cd $(git rev-parse --show-toplevel) && pwd'
+alias gr='git-root'
 
 # Define what happens when calling vim
 alias vim='$VIM_TERM'
