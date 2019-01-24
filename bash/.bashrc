@@ -69,23 +69,28 @@ exit_code_indicator () {
     fi
 }
 
-# function used in shell prompt to indicated open tasks (taskwarrior)
-task_indicator () {
-    if [[ -e ~/.taskrc ]]; then
-        number_tasks_due_today=$(task +TODAY or +OVERDUE count)
+# # function used in shell prompt to indicated open tasks (taskwarrior)
+# task_indicator () {
+#     if [[ -e ~/.taskrc ]]; then
+#         number_tasks_due_today=$(task +TODAY or +OVERDUE count)
 
-        if [ $number_tasks_due_today -ne "0" ];then
-            echo "(${number_tasks_due_today})"
-        else
-            echo "(${number_tasks_due_today})"
-        fi
-    else
-        echo "(!)"
-    fi
-}
+#         if [ $number_tasks_due_today -ne "0" ];then
+#             echo "(${number_tasks_due_today})"
+#         else
+#             echo "(${number_tasks_due_today})"
+#         fi
+#     else
+#         echo "(!)"
+#     fi
+# }
+
+source $HOME/.bash_git_prompt
+GIT_PS1_SHOWDIRTYSTATE="true"
+GIT_PS1_SHOWUNTRACKEDFILES="true"
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\] $(exit_code_indicator) $(task_indicator)\$ '
+    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\] $(exit_code_indicator) $(task_indicator)\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\] $(exit_code_indicator) \[\e[01;36m\]$(__git_ps1 "[%s]")\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
