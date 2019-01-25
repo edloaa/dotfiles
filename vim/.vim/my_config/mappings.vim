@@ -159,7 +159,7 @@ nmap <leader>a: :Tabularize /:\zs<CR>
 vmap <leader>a: :Tabularize /:\zs<CR>
 nmap <leader>a# :Tabularize /#<CR>
 vmap <leader>a# :Tabularize /#<CR>
-cnoremap <leader>a Tabularize /
+cnoremap ,a Tabularize /
 
 " ROT13 the entire file
 nmap <leader>c ggg?G
@@ -217,10 +217,10 @@ nmap <silent> <leader>Ss :set spelllang=sv<CR>
 nmap <leader>t :terminal<CR>
 
 " Read templates
-cnoremap <leader>t -1 read ~/.templates/
+cnoremap ,t -1 read ~/.templates/
 
 " Map <leader>v in command-line mode to replace the commandline with the Ex command-line beneath the cursor in the buffer
-cnoremap <leader>v <C-\>esubstitute(getline('.'), '^\s*\(' . escape(substitute(&commentstring, '%s.*$', '', ''), '*') . '\)*\s*:*' , '', '')<CR>
+cnoremap ,v <C-\>esubstitute(getline('.'), '^\s*\(' . escape(substitute(&commentstring, '%s.*$', '', ''), '*') . '\)*\s*:*' , '', '')<CR>
 
 " Turn off search highlight
 nnoremap <silent> <leader>h :nohlsearch<CR>
