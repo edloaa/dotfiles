@@ -1,0 +1,15 @@
+[user]
+	name = edloaa
+	email = edloaa@gmail.com
+[color]
+	ui = auto
+[core]
+	editor = nvim
+[alias]
+	a = add
+	c = commit
+	s = status
+	co = checkout
+	root = rev-parse --show-toplevel
+	undo = checkout --
+	unstage = reset HEAD --

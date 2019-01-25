@@ -13,6 +13,7 @@ then
         conky \
         editorconfig \
         fzf \
+        git \
         neovim \
         nethack \
         taskwarrior \
