@@ -87,6 +87,7 @@ exit_code_indicator () {
 source $HOME/.bash_git_prompt
 GIT_PS1_SHOWDIRTYSTATE="true"
 GIT_PS1_SHOWUNTRACKEDFILES="true"
+GIT_PS1_SHOWSTASHSTATE="true"
 
 if [ "$color_prompt" = yes ]; then
     # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\] $(exit_code_indicator) $(task_indicator)\$ '
