@@ -201,5 +201,5 @@ if [[ -n "$NVIM_LISTEN_ADDRESS" ]]; then
 fi
 
 # Always run tmux
-[[ -z "$TMUX" ]] && tmux
+[[ -z "$TMUX" ]] && tmux-split
 
