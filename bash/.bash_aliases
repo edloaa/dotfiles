@@ -61,8 +61,9 @@ alias vim='$VIM_TERM'
 # Custom tmux sessions
 alias tmux-split='~/.tmux/tmux-split.sh'
 
-# Search packages
-alias pkgsearch='apt-cache search'
+# Packages
+alias packs='apt-cache search'
+alias packin='sudo apt install'
 
 # Create new files from templates
 TEMPLATE_DIR="$HOME/.templates"
