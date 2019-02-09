@@ -185,7 +185,7 @@ nmap <leader>fv :e $MYVIMRC<CR>
 nmap <silent> <leader>gd :Gdiff <CR>
 nmap <silent> <leader>gs :Gstatus <CR>
 " Review and push a repository
-command! GitReviewAndPush !terminator -e "$HOME/.vim/my_scripts/git_review_and_push.sh"
+command! GitReviewAndPush !xfce4-terminal -e "$HOME/.vim/my_scripts/git_review_and_push.sh"
 nmap <silent> <leader>gp :GitReviewAndPush <CR>
 " (Plugin) VIM-GITGUTTER: Highlighting and hunks
 nmap <silent> <leader>gt :GitGutterLineHighlightsToggle <CR>
