@@ -25,6 +25,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'lervag/vimtex'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
@@ -124,4 +125,7 @@ let g:EditorConfig_max_line_indicator = "line"
 " VIM-COMMENTARY
 " Matlab comments
 autocmd FileType matlab setlocal commentstring=%\ %s
+
+" FZF.VIM
+let g:fzf_layout={'down': '70%'}
 
