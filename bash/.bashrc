@@ -204,5 +204,5 @@ fi
 [[ -z "$TMUX" ]] && tmux-split
 
 
-export FZF_DEFAULT_COMMAND='find'
+export FZF_DEFAULT_COMMAND='find -type f'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

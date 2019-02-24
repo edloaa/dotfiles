@@ -45,6 +45,13 @@ alias cd..='cd ..'
 # Use python3 as standard interpreter
 alias python='python3'
 
+# Python virtual env
+alias av='deactivate &> /dev/null; source .venv/bin/activate'
+alias dv='deactivate'
+alias venv_make='python3 -m venv .venv'
+alias venv_freeze='pip freeze > requirements.txt'
+alias venv_install='pip install -r requirements.txt'
+
 # Git
 alias g='git'
 
