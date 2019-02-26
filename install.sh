@@ -18,9 +18,9 @@ then
         nethack \
         taskwarrior \
         templates \
-        terminator \
         tmux \
         vim \
+        virtualenvwrapper \
     )
 
     for app in ${app_list[@]}; do
