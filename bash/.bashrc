@@ -201,7 +201,7 @@ if [[ -n "$NVIM_LISTEN_ADDRESS" ]]; then
 fi
 
 # Always run tmux
-[[ -z "$TMUX" ]] && tmux-split
+[[ -z "$TMUX" ]] && tmux
 
 
 export FZF_DEFAULT_COMMAND='find -type f'
