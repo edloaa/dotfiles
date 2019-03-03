@@ -51,6 +51,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - pycharm
 - ranger
 - rsync
+- sloccount
 - speedpad
 - stow
 - taskwarrior & tasksh
