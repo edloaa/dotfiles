@@ -20,6 +20,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'bronson/vim-visual-star-search'
 Plug 'davidhalter/jedi-vim'
+Plug 'elzr/vim-json'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
@@ -48,6 +49,7 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'zchee/deoplete-jedi'
 else
   Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
