@@ -12,6 +12,7 @@ then
         bash \
         conky \
         editorconfig \
+        flake8 \
         fzf \
         git \
         neovim \

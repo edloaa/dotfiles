@@ -132,3 +132,6 @@ autocmd FileType matlab setlocal commentstring=%\ %s
 " FZF.VIM
 let g:fzf_layout={'down': '70%'}
 
+" FLAKE8
+let g:flake8_quickfix_height=15
+
