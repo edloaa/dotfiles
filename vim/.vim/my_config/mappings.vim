@@ -107,6 +107,9 @@ if has("nvim")
     tnoremap <C-v><Esc> <Esc>
 endif
 
+" Fix last spelling mistakes in insert mode
+inoremap <C-s> <C-g>u<Esc>[s1z=`]a<C-g>u
+
 " -------------------------------------------
 " ---------- FUNCTION KEY MAPPINGS ----------
 " -------------------------------------------
