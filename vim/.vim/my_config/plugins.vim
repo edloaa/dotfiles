@@ -44,6 +44,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
+Plug   'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 
 " Snipptes and completion
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -109,6 +110,10 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
+
+" TEX-CONCEAL
+set conceallevel=2
+let g:tex_conceal="abdgm"
 
 " ULTISNIPS
 let g:UltiSnipsExpandTrigger       = "<S-Tab>"
