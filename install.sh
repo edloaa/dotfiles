@@ -15,6 +15,7 @@ then
         flake8 \
         fzf \
         git \
+        latex \
         neovim \
         nethack \
         taskwarrior \
