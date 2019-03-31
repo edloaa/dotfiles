@@ -213,3 +213,6 @@ export WORKON_HOME=$HOME/.virtualenvs
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 alias mkvirtualenv='mkvirtualenv --python=/usr/bin/python3'
 
+# ===== Temporary =====
+alias M='exec vim main.tex'
+
