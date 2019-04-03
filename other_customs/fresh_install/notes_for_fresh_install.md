@@ -26,7 +26,6 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 
 **ESSENTIALS**
 
-- bpython3
 - conky
 - curl
 - dropbox & "thunar support" (?)
@@ -41,6 +40,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - gsmartcontrol
 - htop
 - inkscape
+- ipython3
 - kdeconnect
 - keepassxc
 - ktouch
