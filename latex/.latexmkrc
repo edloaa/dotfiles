@@ -1,7 +1,9 @@
 # FROM: http://ftp.math.purdue.edu/mirrors/ctan.org/support/latexmk/example_rcfiles/pdflatexmkrc
 
+# Use xelatex
+$pdflatex = 'xelatex -synctex=1 %O %S';
+
 # Use of glossaries, extra indexes, epstopdf, and other images conversions
-# $pdflatex = 'pdflatex --shell-escape %O %S';
 
 # Custom dependency for glossary/glossaries package, if you make custom
 # glossaries you may have to add items to the @cus_dep_list and corresponding
