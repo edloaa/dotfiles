@@ -2,15 +2,15 @@
 
 # XELATEX
 # http://ftp.acc.umu.se/mirror/CTAN/support/latexmk/example_rcfiles/xelatex_latexmkrc
-# $pdflatex = 'xelatex -synctex=1 %O %S';
-# $pdf_mode = 5;
-# $postscript_mode = $dvi_mode = 0;
+$pdflatex = 'xelatex -synctex=1 %O %S';
+$pdf_mode = 5;
+$postscript_mode = $dvi_mode = 0;
 
 # LUALATEX
 # See: http://ftp.acc.umu.se/mirror/CTAN/support/latexmk/example_rcfiles/lualatex_latexmkrc
-$pdflatex = 'lualatex -file-line-error %O %S';
-$pdf_mode = 4;
-$postscript_mode = $dvi_mode = 0;
+# $pdflatex = 'lualatex -file-line-error %O %S';
+# $pdf_mode = 4;
+# $postscript_mode = $dvi_mode = 0;
 
 # Use of glossaries, extra indexes, epstopdf, and other images conversions
 
