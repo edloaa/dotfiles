@@ -204,7 +204,16 @@ fi
 [[ -z "$TMUX" ]] && tmux
 
 
-export FZF_DEFAULT_COMMAND='find -type f'
+export FZF_DEFAULT_COMMAND="find -type f \( \
+                            ! -iname '.git' \
+                            ! -iname '*.pyc' \
+                            ! -iname '*.pdf' \
+                            ! -iname '*.o' \
+                            ! -iname '*.so' \
+                            \) \
+                            ! -path '~/Dropbox/*' \
+                            "
+
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # virtualenvwrapper
