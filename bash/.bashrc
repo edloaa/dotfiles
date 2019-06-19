@@ -210,6 +210,7 @@ export FZF_DEFAULT_COMMAND="find -type f \( \
                             ! -iname '*.pdf' \
                             ! -iname '*.o' \
                             ! -iname '*.so' \
+                            ! -iname '*.log' \
                             \) \
                             ! -path '~/Dropbox/*' \
                             "
