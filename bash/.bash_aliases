@@ -1,7 +1,28 @@
-# BASH alias, sourced by ~/.bashrc
-# ================================
+# BASH aliases, sourced by ~/.bashrc
+# ==================================
 
-alias cp='cp -i' # confirm before overwriting something
+# Enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# Some more ls aliases
+alias ll='ls -ahlF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands
+# Use like so:
+# --> sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# confirm before overwriting something
+alias cp='cp -i'
 alias prgrep='pgrep -fl'
 
 # SSH to Raspberry Pi
@@ -39,15 +60,13 @@ alias sl='sl -e'
 # Source bashrc
 alias source_bashrc='source ~/.bashrc'
 
-# Catch common mistakes
 alias cd..='cd ..'
+alias ..='cd ..'
 
 # Use python3 as standard interpreter
 alias python='python3'
 
 # Python virtual env
-alias av='deactivate &> /dev/null; source .venv/bin/activate'
-alias dv='deactivate'
 alias venv_make='python3 -m venv .venv'
 alias venv_freeze='pip freeze > requirements.txt'
 alias venv_install='pip install -r requirements.txt'
@@ -71,15 +90,6 @@ alias tmux-split='~/.tmux/tmux-split.sh'
 # Packages
 alias packs='apt-cache search'
 alias packin='sudo apt install'
-
-# Create new files from templates
-TEMPLATE_DIR="$HOME/.templates"
-TEMPLATE_PYTHON="python.py"
-TEMPLATE_BASH="bash.sh"
-TEMPLATE_C="c.c"
-alias templ_py='cp -vi ${TEMPLATE_DIR}/${TEMPLATE_PYTHON} . && eval "$VIM ./${TEMPLATE_PYTHON}"'
-alias templ_sh='cp -vi ${TEMPLATE_DIR}/${TEMPLATE_BASH}   . && eval "$VIM ./${TEMPLATE_BASH}"'
-alias templ_c='cp -vi  ${TEMPLATE_DIR}/${TEMPLATE_C}      . && eval "$VIM ./${TEMPLATE_C}"'
 
 #  PDFs
 pdf_2-1_scale() {
@@ -117,4 +127,3 @@ ConvertWeirdFileNameCharacters() {
         mv -v "$file_name" "$new_file_name"
     done
 }
-
