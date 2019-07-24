@@ -1,13 +1,13 @@
 #!/bin/bash
 # This hook is sourced after a new virtualenv is activated.
 
-[[ -f "requirements.txt" ]] && pip install -r "requirements.txt"
+# [[ -f "requirements.txt" ]] && pip install -r "requirements.txt"
 
-pip install numpy
-pip install scipy
-pip install matplotlib
+# pip install numpy
+# pip install scipy
+# pip install matplotlib
 
-# Sphinx
-pip install sphinx
-pip install sphinx_rtd_theme
-pip install recommonmark
+# # Sphinx
+# pip install sphinx
+# pip install sphinx_rtd_theme
+# pip install recommonmark
