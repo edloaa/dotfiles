@@ -24,82 +24,82 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 
 ## Useful software
 
-**ESSENTIALS**
+**Essentials**
 
 - conky
-- curl
-- dropbox & "thunar support" (?)
-- editorconfig
-- enigmail
 - firefox
 - gimp
-- git & gitk
-- gocryptfs
 - gparted
-- gpg (gnupg)
-- gsmartcontrol
 - htop
 - inkscape
-- ipython3
 - kdeconnect
-- keepassxc
 - ktouch
-- latex & texlive & texmaker & jabref
-- nmap
-- pandoc & pandoc-citeproc
-- pwgen
-- pycharm
-- ranger
-- rsync
-- sloccount
-- speedpad
-- stow
-- taskwarrior & tasksh
-- terminator
+- latex (etc.)
 - thunderbird
 - ttf-mscorefonts-installer (Microsoft fonts)
+- vlc
+- youtube-dl
+
+**Development**
+
+- curl
+- editorconfig
+- espeak
+- faker
+- gcc
+- git & gitk
+- gocryptfs
+- gpg (gnupg)
+- jupyter-notebook
+- neovim
+- octave
+- pandoc & pandoc-citeproc
+- sloccount
+- ssh
+- stow
+- tmux
+- tree
 - urlview
 - vim & gvim
-- vlc
-- wireshark (& GUI)
+- wget
+- wireshark
 - xclip
-- youtube-dl
+
+**Privacy, backups, etc.**
+
+- enigmail
+- keepassxc
+- nmap
+- pwgen
+- rsync
+- seahorse
+- tor browser
 - zulucrypt
 
-**SECONDARY**
+**Misc**
 
-- akregator
 - cheese
 - cmatrix
 - cowsay
 - dia
+- dropbox & "thunar support" (?)
 - faenza-icon-theme
-- faker
 - figlet
 - fortune
-- gcc
+- gsmartcontrol
 - guake (alternative terminal)
 - matlab
 - meld
 - nethack
-- octave
-- seahorse
+- ranger
 - skypeforlinux
 - sl
+- speedpad
 - spotify
+- taskwarrior & tasksh
+- terminator
 - toilet
-- tor browser
 - translate-shell (`trans`, Command-line translator using Google Translate)
-- tree
 - virtual-box
 - wikipedia2text
 - xflr5
-
-**Also check**
-
-- espeak
-- neovim (& GUI version)
-- ssh
-- tmux
-- wget
-
