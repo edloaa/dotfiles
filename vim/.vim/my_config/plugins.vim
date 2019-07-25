@@ -86,7 +86,7 @@ let g:airline#extensions#tabline#enabled   = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " VIM-AIRLINE-THEMES
-let g:airline_theme = 'wombat'
+let g:airline_theme='gruvbox'
 
 " SYNTASTIC
 let g:syntastic_always_populate_loc_list = 0
