@@ -13,8 +13,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" Plug 'flazz/vim-colorschemes'
-" Plug 'nelstrom/vim-markdown-folding'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-trailing-whitespace'
@@ -140,8 +138,5 @@ let g:fzf_layout={'down': '70%'}
 " FLAKE8
 let g:flake8_quickfix_height=15
 
-" VIM-CELLMODE
-let g:cellmode_screen_sessionname='ipython3'
-let g:cellmode_screen_window='1'
-let g:cellmode_tmux_panenumber='2'
-
+" SUPERTAB
+let g:SuperTabDefaultCompletionType = "<c-n>"
