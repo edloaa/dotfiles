@@ -71,6 +71,9 @@ alias venv_make='python3 -m venv .venv'
 alias venv_freeze='pip freeze > requirements.txt'
 alias venv_install='pip install -r requirements.txt'
 
+# Jupyter notebook
+alias jn='jupyter-notebook .'
+
 # Git
 alias g='git'
 
