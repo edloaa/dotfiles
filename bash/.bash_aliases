@@ -76,6 +76,7 @@ alias jn='jupyter-notebook .'
 
 # Git
 alias g='git'
+alias gs='git status'  # Run git instead of ghostscript
 
 # Ranger
 alias r='ranger'

@@ -13,6 +13,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-trailing-whitespace'
@@ -42,7 +43,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
-Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 
 " Snipptes and completion
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
