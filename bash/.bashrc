@@ -152,7 +152,7 @@ export FZF_DEFAULT_COMMAND="find -type f \( \
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # virtualenvwrapper
-export VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 alias mkvirtualenv='mkvirtualenv --python=/usr/bin/python3'
