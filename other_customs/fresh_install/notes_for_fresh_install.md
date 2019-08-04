@@ -61,6 +61,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - tree
 - urlview
 - vim & gvim
+- virtualenvwrapper
 - wget
 - wireshark
 - xclip
