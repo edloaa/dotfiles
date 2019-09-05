@@ -8,8 +8,11 @@
 [alias]
 	a = add
 	c = commit
-	s = status
+	cb = checkout -b
 	co = checkout
 	root = rev-parse --show-toplevel
+	s = status
 	undo = checkout --
 	unstage = reset HEAD --
+        amend = commit --amend
+        d = diff
