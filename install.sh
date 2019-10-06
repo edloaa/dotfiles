@@ -10,6 +10,7 @@ if [[ "$install" = "y" ]]
 then
     app_list=( \
         bash \
+        conda \
         conky \
         editorconfig \
         flake8 \
