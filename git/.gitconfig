@@ -1,10 +1,13 @@
 [user]
 	name = edloaa
 	email = edloaa@gmail.com
+
 [color]
 	ui = auto
+
 [core]
 	editor = nvim
+
 [alias]
 	a = add
 	c = commit
@@ -16,8 +19,13 @@
 	unstage = reset HEAD --
         amend = commit --amend
         d = diff
+
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
+
 [mergetool]
 	prompt = false
+
+[url "https://github.com/"]
+    insteadOf = gh:
