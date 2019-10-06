@@ -16,3 +16,8 @@
 	unstage = reset HEAD --
         amend = commit --amend
         d = diff
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
