@@ -46,6 +46,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - editorconfig
 - espeak
 - faker
+- fonts-hack-ttf  # https://github.com/source-foundry/Hack
 - gcc
 - git & gitk
 - gocryptfs
