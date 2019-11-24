@@ -35,6 +35,7 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - kdeconnect
 - ktouch
 - latex (etc.)
+- synapse (utility to launch everything on your computer)
 - thunderbird
 - ttf-mscorefonts-installer (Microsoft fonts)
 - vlc
