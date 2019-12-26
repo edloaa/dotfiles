@@ -192,11 +192,11 @@ command! GitReviewAndPush !xfce4-terminal -e "$HOME/.vim/my_scripts/git_review_a
 nmap <silent> <leader>gp :GitReviewAndPush <CR>
 " (Plugin) VIM-GITGUTTER: Highlighting and hunks
 nmap <silent> <leader>gt :GitGutterLineHighlightsToggle <CR>
-nmap <leader>ghn <Plug>GitGutterNextHunk
-nmap <leader>ghN <Plug>GitGutterPrevHunk
-nmap <leader>ghs <Plug>GitGutterStageHunk
-nmap <leader>ghu <Plug>GitGutterUndoHunk
-nmap <leader>ghv <Plug>GitGutterPreviewHunk
+nmap <leader>ghn <Plug>(GitGutterNextHunk)
+nmap <leader>ghN <Plug>(GitGutterPrevHunk)
+nmap <leader>ghs <Plug>(GitGutterStageHunk)
+nmap <leader>ghu <Plug>(GitGutterUndoHunk)
+nmap <leader>ghv <Plug>(GitGutterPreviewHunk)
 
 " Toggle for showing invisibles (tabs, carriage returns, ...)
 nnoremap <silent> <leader>l :set list!<CR>
