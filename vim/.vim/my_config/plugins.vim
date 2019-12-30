@@ -1,17 +1,31 @@
 " ---------- PLUGINS ----------
 
 " VIM-PLUG plugin manager (https://github.com/junegunn/vim-plug)
-if has('nvim') && empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-    silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
-                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-elseif empty(glob('~/.vim/autoload/plug.vim'))
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+" TODO:
+" * Clean up mess
+if has('win32')
+    if has('nvim') && empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+        silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+                    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    elseif empty(glob('C:\myconf\dotfiles\vim\.vim\autoload\plug.vim'))
+        silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    endif
+    call plug#begin('C:\myconf\dotfiles\vim\.vim\plugged')
+elseif has('unix')
+    if has('nvim') && empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+        silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+                    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    elseif empty(glob('~/.vim/autoload/plug.vim'))
+        silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    endif
+    call plug#begin('~/.vim/plugged')
 endif
-
-call plug#begin('~/.vim/plugged')
 
 Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 Plug 'airblade/vim-gitgutter'

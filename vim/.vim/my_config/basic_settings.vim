@@ -1,7 +1,14 @@
 " ---------- BASIC SETTINGS ----------
 
 set encoding=utf-8  " Standard character encoding
-set shell=/bin/bash " Standard shell
+
+" Standard shell
+if has('win32')
+    set shell=C:\Windows\System32\cmd.exe
+elseif has('unix')
+    set shell=/bin/bash
+endif
+
 syntax enable 	    " Syntax highlighting
 
 if ! has("nvim")

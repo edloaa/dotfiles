@@ -14,9 +14,19 @@ function! SourceIfExists(file)
     endif
 endfunction
 
-call SourceIfExists("~/.vim/my_config/plugins.vim")
-call SourceIfExists("~/.vim/my_config/basic_settings.vim")
-call SourceIfExists("~/.vim/my_config/mappings.vim")
-call SourceIfExists("~/.vim/my_config/abbreviations.vim")
-call SourceIfExists("~/.vimrc_priv") " Private settings
-
+" TODO:
+" * Clean up mess
+" * Explicit paths needed if RTP set?
+if has('win32')
+    set rtp^=C:\myconf\dotfiles\vim\.vim
+    call SourceIfExists('C:\myconf\dotfiles\vim\.vim\my_config\plugins.vim')
+    call SourceIfExists('C:\myconf\dotfiles\vim\.vim\my_config\basic_settings.vim')
+    call SourceIfExists('C:\myconf\dotfiles\vim\.vim\my_config\mappings.vim')
+    call SourceIfExists('C:\myconf\dotfiles\vim\.vim\my_config\abbreviations.vim')
+elseif has('unix')
+    call SourceIfExists("~/.vim/my_config/plugins.vim")
+    call SourceIfExists("~/.vim/my_config/basic_settings.vim")
+    call SourceIfExists("~/.vim/my_config/mappings.vim")
+    call SourceIfExists("~/.vim/my_config/abbreviations.vim")
+    call SourceIfExists("~/.vimrc_priv") " Private settings
+endif
