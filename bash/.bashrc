@@ -174,3 +174,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 alias cworkon='conda activate'
+alias cdeactivate='conda deactivate'
