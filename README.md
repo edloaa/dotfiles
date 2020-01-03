@@ -21,9 +21,12 @@ $ ./install.sh
     * Git (https://git-scm.com)
     * Python (https://www.python.org/)
         * ``pip install --user neovim jedi``
+    * Curl (https://github.com/curl/curl | https://curl.haxx.se/windows/)
     * Vim (https://www.vim.org/)
         * Use same 'bit version' as Python
     * Hack font (https://github.com/source-foundry/Hack)
+
+(Shell with admin rights)
 
 ```sh
 # Install dotfile repo

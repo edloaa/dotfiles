@@ -9,7 +9,7 @@ if has('win32')
                     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
         autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
     elseif empty(glob('C:\myconf\dotfiles\vim\.vim\autoload\plug.vim'))
-        silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        silent !curl -fLo C:\myconf\dotfiles\vim\.vim\autoload\plug.vim --create-dirs
                     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
         autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
     endif
