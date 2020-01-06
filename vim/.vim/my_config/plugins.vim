@@ -27,23 +27,18 @@ elseif has('unix')
     call plug#begin('~/.vim/plugged')
 endif
 
-Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 Plug 'airblade/vim-gitgutter'
-Plug 'altercation/vim-colors-solarized'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'bronson/vim-visual-star-search'
 Plug 'davidhalter/jedi-vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
-Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'lervag/vimtex'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'nvie/vim-flake8'
 Plug 'scrooloose/nerdtree'
 Plug 'tommcdo/vim-exchange'
@@ -75,15 +70,29 @@ call plug#end()
 " Shortcut for updating VIM-PLUG and all other plugins
 command! PU w | source $MYVIMRC | PlugUpdate | PlugUpgrade
 
+" ------------------------------
+" ----- Not used regularly -----
+" Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'elzr/vim-json'
+" Plug 'godlygeek/tabular'
+" Plug 'nathanaelkane/vim-indent-guides'
+
+" " VIM-INDENT-GUIDES
+" let g:indent_guides_enable_on_vim_startup = 0
+" let g:indent_guides_start_level           = 1
+" let g:indent_guides_guide_size            = 1
+"
+" " TEX-CONCEAL
+" set conceallevel=2
+" let g:tex_conceal="abdgm"
+" ----- Not used regularly -----
+" ------------------------------
+
 " ---------- PLUGIN SETTINGS ----------
 
 " NERDTREE
 let NERDTreeShowHidden = 1
-
-" VIM-INDENT-GUIDES
-let g:indent_guides_enable_on_vim_startup = 0
-let g:indent_guides_start_level           = 1
-let g:indent_guides_guide_size            = 1
 
 " GRUVBOX
 let g:gruvbox_contrast_dark = 'hard' " Options: soft, medium (default), hard
@@ -122,10 +131,6 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
-
-" TEX-CONCEAL
-set conceallevel=2
-let g:tex_conceal="abdgm"
 
 " ULTISNIPS
 let g:UltiSnipsExpandTrigger       = "<S-Tab>"
