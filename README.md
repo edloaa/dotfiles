@@ -37,11 +37,11 @@ $ cd dotfiles
 
 # Install Vim config (place config file in installation folder)
 $ cp _windows/_vimrc "C:\Program Files (x86)\Vim"
+
+# Install Git config
+set HOME="$HOMEDRIVE$HOMEPATH"
+cp .\git\.gitconfig $HOME
 ```
-
-**TODO**
-
-* Install git config !?
 
 ## Installation of other customizations
 
