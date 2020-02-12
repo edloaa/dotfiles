@@ -17,6 +17,21 @@ $ ./install.sh
 
 ### Windows
 
+* Install Chocolatey (https://chocolatey.org/install)
+    -  gimp
+    - 7zip
+    - firefox
+    - git
+    - inkscape
+    - keepassxc
+    - microsoft-windows-terminal
+    - notepadplusplus
+    - python
+    - python2
+    - vim
+    - vlc
+    - wget
+
 * Install
     * Git (https://git-scm.com)
     * Python (https://www.python.org/)
@@ -37,6 +52,9 @@ $ cd dotfiles
 
 # Install Vim config (place config file in installation folder)
 $ cp _windows/_vimrc "C:\Program Files (x86)\Vim"
+
+# Or with Chocolatey
+$ cp _windows/_vimrc C:\tools\vim
 
 # Install Git config
 set HOME="$HOMEDRIVE$HOMEPATH"
