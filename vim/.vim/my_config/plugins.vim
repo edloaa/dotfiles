@@ -4,8 +4,8 @@
 " TODO:
 " * Clean up mess
 if has('win32')
-    if has('nvim') && empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-        silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    if has('nvim') && empty(glob('~/AppData/Local/nvim/autoload/plug.vim'))
+        silent !curl -fLo ~/AppData/Local/nvim/autoload/plug.vim --create-dirs
                     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
         autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
     elseif empty(glob('C:\myconf\dotfiles\vim\.vim\autoload\plug.vim'))
@@ -36,7 +36,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'lervag/vimtex'
+" Plug 'lervag/vimtex'
 Plug 'machakann/vim-highlightedyank'
 Plug 'morhetz/gruvbox'
 Plug 'nvie/vim-flake8'
@@ -137,8 +137,8 @@ let g:UltiSnipsExpandTrigger       = "<S-Tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<C-b>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-z>"
 
-" DEOPLETE
-let g:deoplete#enable_at_startup = 1
+" " DEOPLETE
+" let g:deoplete#enable_at_startup = 1
 
 " JEDI-VIM
 let g:jedi#use_splits_not_buffers = "right"
@@ -159,3 +159,7 @@ let g:flake8_quickfix_height=15
 
 " SUPERTAB
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
+if has('win32')
+    let g:python3_host_prog = 'C:\Python38\python.EXE'
+endif

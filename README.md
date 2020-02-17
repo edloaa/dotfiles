@@ -20,11 +20,13 @@ $ ./install.sh
 * Install Chocolatey (https://chocolatey.org/install)
     -  gimp
     - 7zip
+    - curl
     - firefox
     - git
     - inkscape
     - keepassxc
     - microsoft-windows-terminal
+    - neovim
     - notepadplusplus
     - python
     - python2
@@ -55,6 +57,9 @@ $ cp _windows/_vimrc "C:\Program Files (x86)\Vim"
 
 # Or with Chocolatey
 $ cp _windows/_vimrc C:\tools\vim
+
+# Neovim
+$ cp .\_vimrc ~/AppData/Local/nvim/init.vim
 
 # Install Git config
 set HOME="$HOMEDRIVE$HOMEPATH"

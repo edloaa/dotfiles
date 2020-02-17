@@ -70,7 +70,7 @@ set updatetime=100
 set background=dark " Always use dark mode
 
 " Standard colorscheme
-if has('win32') && !has("gui_running")
+if has('win32') && !has('nvim') && !has('gui_running')
     colorscheme ron
 else
     colorscheme gruvbox
