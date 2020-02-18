@@ -64,15 +64,10 @@ $ cp .\_vimrc ~/AppData/Local/nvim/init.vim
 # Install Git config
 set HOME="$HOMEDRIVE$HOMEPATH"
 cp .\git\.gitconfig $HOME
+
+# Install Powershell settings
+cp _windows\powershell_settings.ps1 $PROFILE
 ```
-
-**Install Powershell settings**
-
-* Windows key --> search "powershell"
-* Right-click Powershell icon --> Open file location
-* Right-click the executable --> Properties
-* In *Target* link to the settings file:
-``%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -NoExit -NoProfile -File "C:\myconf\dotfiles\_windows\powershell_settings.ps1"``
 
 ## Installation of other customizations
 
