@@ -67,6 +67,9 @@ cp .\git\.gitconfig $HOME
 
 # Install Powershell settings
 cp _windows\powershell_settings.ps1 $PROFILE
+
+# Install Windows Terminal settings
+cp _windows\windows_terminal_settings.json $env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState
 ```
 
 ## Installation of other customizations
