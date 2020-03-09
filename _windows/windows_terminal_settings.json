@@ -1,5 +1,3 @@
-// For documentation on these settings, see: https://aka.ms/terminal-documentation
-
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -11,7 +9,6 @@
     "profiles":
     [
         {
-            // Make changes here to the powershell.exe profile
             "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
             "name": "Matrix",
             "commandline": "powershell.exe",
@@ -23,7 +20,6 @@
             "colorScheme": "UbuntuPurple"
         },
         {
-            // Make changes here to the cmd.exe profile
             "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
             "name": "cmd",
             "commandline": "cmd.exe",
@@ -37,7 +33,6 @@
         }
     ],
 
-    // Add custom color schemes to this array
     "schemes": [
         {
             "name" : "UbuntuPurple",
@@ -54,7 +49,7 @@
             "brightYellow" : "#FCE94F",
             "cyan" : "#06989A",
             "foreground" : "#EEEEEE",
-            "green" : "#300A24",
+            "green" : "#00C955",
             "purple" : "#75507B",
             "red" : "#CC0000",
             "white" : "#D3D7CF",
@@ -62,8 +57,6 @@
         }
     ],
 
-    // Add any keybinding overrides to this array.
-    // To unbind a default keybinding, set the command to "unbound"
     "keybindings": [
         { "command": "closePane", "keys": ["Ctrl+shift+d"] },
         { "command": "increaseFontSize", "keys": ["Ctrl+plus"] },
