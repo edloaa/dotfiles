@@ -228,6 +228,9 @@ cnoremap ,v <C-\>esubstitute(getline('.'), '^\s*\(' . escape(substitute(&comment
 " Turn off search highlight
 nnoremap <silent> <leader>h :nohlsearch<CR>
 
+" Run Python code selected in visual mode
+vmap <silent> <leader>p :'<,'> w !python3<CR>
+
 " --------------------------------------
 " ---------- SPECIAL MAPPINGS ----------
 " --------------------------------------
