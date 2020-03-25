@@ -18,7 +18,7 @@ $ ./install.sh
 ### Windows
 
 * Install Chocolatey (https://chocolatey.org/install)
-    -  gimp
+    - gimp
     - 7zip
     - curl
     - firefox
@@ -35,13 +35,12 @@ $ ./install.sh
     - wget
 
 * Install
-    * Git (https://git-scm.com)
-    * Python (https://www.python.org/)
+    * Add to *neovim*
         * ``pip install --user neovim jedi``
-    * Curl (https://github.com/curl/curl | https://curl.haxx.se/windows/)
-    * Vim (https://www.vim.org/)
-        * Use same 'bit version' as Python
     * Hack font (https://github.com/source-foundry/Hack)
+
+* Add to AutoRun programs
+    * _windows/fua.bat
 
 (Shell with admin rights)
 
