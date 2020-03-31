@@ -18,10 +18,11 @@ $ ./install.sh
 ### Windows
 
 * Install Chocolatey (https://chocolatey.org/install)
-    - gimp
     - 7zip
+    - autoruns
     - curl
     - firefox
+    - gimp
     - git
     - inkscape
     - keepassxc
