@@ -64,7 +64,9 @@ alias cd..='cd ..'
 alias ..='cd ..'
 
 # Use python3 as standard interpreter
-alias python='python3'
+alias python='python3.8'
+alias py='python'
+alias p='python'
 
 # Python virtual env
 alias venv_make='python3 -m venv .venv'
