@@ -45,6 +45,10 @@ Set-Alias -Name dev -Value ChangeDirDevelopment
 Function ChangeDirDotfiles {cd $dotfiles}
 Set-Alias -Name dotfiles -Value ChangeDirDotfiles
 
+# ----- choco/system update -----
+Function ChocoUpgradeAll {choco upgrade all -y}
+Set-Alias -Name sysupd -Value ChocoUpgradeAll
+
 # ----- PowerShell -----
 Function UpdatePowerShellSettings {
     vim $dotfiles/_windows/powershell_settings.ps1
