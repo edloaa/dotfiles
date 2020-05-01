@@ -1,31 +1,31 @@
 [user]
-	name = edloaa
-	email = edloaa@gmail.com
+    name = edloaa
+    email = edloaa@gmail.com
 
 [color]
-	ui = auto
+    ui = auto
 
 [core]
-	editor = nvim
+    editor = nvim
 
 [alias]
-	a = add
-	c = commit
-	cb = checkout -b
-	co = checkout
-	root = rev-parse --show-toplevel
-	s = status
-	undo = checkout --
-	unstage = reset HEAD --
-        amend = commit --amend
-        d = diff
+    a = add
+    c = commit
+    cb = checkout -b
+    co = checkout
+    root = rev-parse --show-toplevel
+    s = status
+    undo = checkout --
+    unstage = reset HEAD --
+    amend = commit --amend
+    d = diff
 
 [merge]
-	tool = vimdiff
-	conflictstyle = diff3
+    tool = vimdiff
+    conflictstyle = diff3
 
 [mergetool]
-	prompt = false
+    prompt = false
 
 [url "https://github.com/"]
     insteadOf = gh:
