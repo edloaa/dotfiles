@@ -33,8 +33,6 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - htop
 - inkscape
 - kdeconnect
-- ktouch
-- latex (etc.)
 - synapse (utility to launch everything on your computer)
 - thunderbird
 - ttf-mscorefonts-installer (Microsoft fonts)
@@ -45,17 +43,16 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 
 - curl
 - editorconfig
-- espeak
-- faker
+- flake8
 - fonts-hack-ttf  # https://github.com/source-foundry/Hack
 - gcc
 - git & gitk
 - gocryptfs
 - gpg (gnupg)
-- jupyter-notebook
 - neovim
 - octave
 - pandoc & pandoc-citeproc
+- python3-dev
 - sloccount
 - ssh
 - stow
@@ -67,6 +64,12 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - wget
 - wireshark
 - xclip
+
+----------
+
+- espeak
+- faker
+- jupyter-notebook
 
 **Privacy, backups, etc.**
 
@@ -84,25 +87,28 @@ $ sudo cp /etc/hosts /etc/hosts.bak
 - cheese
 - cmatrix
 - cowsay
-- dia
 - dropbox & "thunar support" (?)
 - faenza-icon-theme
 - figlet
 - fortune
 - gsmartcontrol
-- guake (alternative terminal)
 - matlab
 - meld
-- nethack
+- nethack-console
 - ranger
 - skypeforlinux
 - sl
-- speedpad
 - spotify
-- taskwarrior & tasksh
 - terminator
 - toilet
 - translate-shell (`trans`, Command-line translator using Google Translate)
 - virtual-box
 - wikipedia2text
 - xflr5
+
+----------
+
+- dia
+- ktouch
+- latex (etc.)
+- taskwarrior & tasksh
