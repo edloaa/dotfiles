@@ -133,3 +133,12 @@ ConvertWeirdFileNameCharacters() {
         mv -v "$file_name" "$new_file_name"
     done
 }
+
+clone_website() {
+    wget --mirror \
+         --convert-links \
+         --adjust-extension \
+         --page-requisites \
+         --no-parent \
+         "$1"  # url
+}
