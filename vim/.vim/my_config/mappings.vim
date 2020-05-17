@@ -231,6 +231,8 @@ nnoremap <silent> <leader>h :nohlsearch<CR>
 " Run Python code selected in visual mode
 vmap <silent> <leader>p :'<,'> w !python3<CR>
 
+vmap <leader>s :'<,'> sort<CR>
+
 " --------------------------------------
 " ---------- SPECIAL MAPPINGS ----------
 " --------------------------------------
