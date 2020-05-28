@@ -35,8 +35,8 @@ Set-Alias -Name gup -Value GitAddAndUpdate
 Set-Alias -Name vim -Value nvim
 
 # ----- Python -----
-Set-Alias -Name p -Value python
-Set-Alias -Name py -Value python
+Set-Alias -Name p -Value python3
+Set-Alias -Name py -Value python3
 
 # ----- cd -----
 Function ChangeDirDevelopment {cd $dev}
