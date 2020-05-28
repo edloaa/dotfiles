@@ -67,6 +67,7 @@ alias ..='cd ..'
 alias python='python3.8'
 alias py='python'
 alias p='python'
+alias bpy='bpython'
 
 # Python virtual env
 alias venv_make='python3 -m venv .venv'

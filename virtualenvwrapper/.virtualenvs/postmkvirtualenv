@@ -13,3 +13,4 @@
 # pip install recommonmark
 
 pip install neovim
+pip install bpython

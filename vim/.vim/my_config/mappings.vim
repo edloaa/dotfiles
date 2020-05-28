@@ -232,6 +232,7 @@ nnoremap <silent> <leader>h :nohlsearch<CR>
 vmap <silent> <leader>p :'<,'> w !python3<CR>
 
 vmap <leader>s :'<,'> sort<CR>
+nmap <leader>v ggVG<CR>
 
 " --------------------------------------
 " ---------- SPECIAL MAPPINGS ----------
