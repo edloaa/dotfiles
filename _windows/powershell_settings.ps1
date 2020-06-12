@@ -37,6 +37,7 @@ Set-Alias -Name vim -Value nvim
 # ----- Python -----
 Set-Alias -Name p -Value python3
 Set-Alias -Name py -Value python3
+Set-Alias -Name pip -Value pip3
 
 # ----- cd -----
 Function ChangeDirDevelopment {cd $dev}
