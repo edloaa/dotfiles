@@ -90,6 +90,7 @@ alias gr='git-root'
 
 # Define what happens when calling vim
 alias vim='$VIM_TERM'
+alias :e='$VIM_TERM'
 
 # Custom tmux sessions
 alias tmux-split='~/.tmux/tmux-split.sh'
