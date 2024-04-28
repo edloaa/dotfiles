@@ -10,7 +10,7 @@
 --   * apt-check (to check for updates)
 
 -- DEVICES SPECIFIC FOR THIS CONFIG:
---   * eno2 : inet interface
+--   * wlo1 : inet interface
 
 conky.config = {
     -- ALIGNMENT AND SIZE
@@ -97,25 +97,25 @@ ${voffset -5}
 NETWORK  ${hr 2}
 ${voffset -10}
 SSID         $alignr $wireless_essid
-Lokal IP     $alignr ${addrs eno2}
+Lokal IP     $alignr ${addrs wlo1}
 External IP  $alignr ${execi 600 curl ipinfo.io/ip}
-Down ${downspeed eno2}/s  [${totaldown eno2}] ${goto 150} Up ${upspeed eno2}/s  [${totalup eno2}]
-${downspeedgraph eno2 25,138 5e7b7b d8deeb -t}   ${goto 140} $alignr ${upspeedgraph eno2 25,138 99c8e8 618094 -t}
-
-${voffset -20}
-TASK MANAGEMENT  ${hr 2}
-${voffset -10}
-Server:    ${goto 100} ${execi 600 bash ~/.task_server/taskserver_check.sh}
-${voffset -10}
-Overdue:   ${goto 100} ${execi 60 task +OVERDUE count}  ${goto 140} Total pending: $alignr ${execi 60 task status:pending count}
-Due today: ${goto 100} ${execi 60 task +DUETODAY count} ${goto 140} Completed:     $alignr ${execi 60 task status:completed end.after:today count}
-${voffset -10}
-Progress:  ${goto 100} ${execi 60 ${template0}}% ${goto 140} ${execibar 60 ${template0}}
+Down ${downspeed wlo1}/s  [${totaldown wlo1}] ${goto 150} Up ${upspeed wlo1}/s  [${totalup wlo1}]
+${downspeedgraph wlo1 25,138 5e7b7b d8deeb -t}   ${goto 140} $alignr ${upspeedgraph wlo1 25,138 99c8e8 618094 -t}
 
 UPDATES  ${hr 2}
 ${voffset -10}
-${execi 120 /usr/lib/update-notifier/apt-check --human-readable}
+${execi 120 /usr/lib/update-notifier/apt-check --human-readable --no-esm-messages | head -n1}
 ]]
+
+-- ${voffset -20}
+-- TASK MANAGEMENT  ${hr 2}
+-- ${voffset -10}
+-- Server:    ${goto 100} ${execi 600 bash ~/.task_server/taskserver_check.sh}
+-- ${voffset -10}
+-- Overdue:   ${goto 100} ${execi 60 task +OVERDUE count}  ${goto 140} Total pending: $alignr ${execi 60 task status:pending count}
+-- Due today: ${goto 100} ${execi 60 task +DUETODAY count} ${goto 140} Completed:     $alignr ${execi 60 task status:completed end.after:today count}
+-- ${voffset -10}
+-- Progress:  ${goto 100} ${execi 60 ${template0}}% ${goto 140} ${execibar 60 ${template0}}
 
 -- vim: ts=4 sw=4 noet ai cindent syntax=lua
 

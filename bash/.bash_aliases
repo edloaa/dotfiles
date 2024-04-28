@@ -64,7 +64,7 @@ alias cd..='cd ..'
 alias ..='cd ..'
 
 # Use python3 as standard interpreter
-alias python='python3.8'
+alias python='python3'
 alias py='python'
 alias p='python'
 alias bpy='bpython'
